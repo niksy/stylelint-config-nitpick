@@ -1,0 +1,35 @@
+{
+  "name": "stylelint-config-niksy",
+  "version": "1.0.0",
+  "description": "Stylelint config for my projects.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint *.js test/**/*.js",
+    "test": "mocha test/**/*.js"
+  },
+  "keywords": [
+    "stylelint",
+    "stylelintconfig",
+    "niksy"
+  ],
+  "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-niksy": "^1.0.2",
+    "lodash": "^4.0.0",
+    "mocha": "^2.3.4",
+    "stylelint": "^3.2.3"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niksy/stylelint-config-niksy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/niksy/stylelint-config-niksy/issues"
+  },
+  "homepage": "https://github.com/niksy/stylelint-config-niksy#readme"
+}
