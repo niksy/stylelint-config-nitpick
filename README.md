@@ -12,7 +12,7 @@ npm install stylelint stylelint-config-niksy --save-dev
 
 ## Usage
 
-Add this config to your `.stylelint`:
+Add this config to your `.stylelintrc`:
 
 ```json
 {
