@@ -26,9 +26,10 @@ describe('Default config', function () {
 		return runStylelint('a { top: .5em; }\n', '../')
 			.then(function ( data ) {
 				var errors = data.results[0].warnings;
+				assert.equal(errors.length, 4);
 				assert.equal(errors[0].rule, 'number-leading-zero');
 				assert.equal(errors[1].rule, 'declaration-colon-space-after');
-				assert.equal(errors[2].rule, 'declaration-block-no-single-line');
+				assert.equal(errors[2].rule, 'block-no-single-line');
 				assert.equal(errors[3].rule, 'selector-no-type');
 				return data;
 			})
