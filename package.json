@@ -17,6 +17,7 @@
     "eslint-config-niksy": "^2.0.0",
     "eslint-plugin-promise": "^1.1.0",
     "lodash": "^4.0.0",
+    "lodash.difference": "^4.3.0",
     "mocha": "^2.4.5",
     "stylelint": "^6.5.1"
   },
