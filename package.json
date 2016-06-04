@@ -3,27 +3,31 @@
   "version": "1.0.0",
   "description": "Stylelint config for my projects.",
   "main": "index.js",
-  "scripts": {
-    "lint": "eslint *.js test/**/*.js",
-    "test": "mocha test/**/*.js"
-  },
-  "keywords": [
-    "stylelint",
-    "stylelintconfig",
-    "niksy"
-  ],
   "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com/)",
   "license": "MIT",
-  "devDependencies": {
-    "eslint": "^1.10.3",
-    "eslint-config-niksy": "^1.0.2",
-    "lodash": "^4.0.0",
-    "mocha": "^2.3.4",
-    "stylelint": "^3.2.3"
-  },
   "directories": {
     "test": "test"
   },
+  "scripts": {
+    "lint": "eslint *.js test/**/*.js",
+    "test": "eslint {index,test/**/*}.js && mocha test/**/*.js"
+  },
+  "devDependencies": {
+    "eslint": "^2.9.0",
+    "eslint-config-niksy": "^2.0.0",
+    "eslint-plugin-promise": "^1.1.0",
+    "lodash": "^4.0.0",
+    "mocha": "^2.4.5",
+    "stylelint": "^6.5.1"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "keywords": [
+    "niksy",
+    "stylelint",
+    "stylelintconfig"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/niksy/stylelint-config-niksy.git"

@@ -4,7 +4,7 @@
 
 [Stylelint][stylelint] config for my projects.
 
-## Installation
+## Install
 
 ```sh
 npm install stylelint stylelint-config-niksy --save-dev

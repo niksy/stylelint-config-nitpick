@@ -1,4 +1,4 @@
-/* eslint-env mocha */
+/* eslint-disable global-require */
 
 var assert = require('assert');
 var isPlainObject = require('lodash/isPlainObject');
@@ -16,9 +16,8 @@ function runStylelint ( code, configFile ) {
 
 describe('Default config', function () {
 
-	var config = require('../');
-
 	it('config objects should be plain objects', function () {
+		var config = require('../');
 		assert.ok(isPlainObject(config));
 		assert.ok(isPlainObject(config.rules));
 	});
@@ -31,6 +30,10 @@ describe('Default config', function () {
 				assert.equal(errors[1].rule, 'declaration-colon-space-after');
 				assert.equal(errors[2].rule, 'declaration-block-no-single-line');
 				assert.equal(errors[3].rule, 'selector-no-type');
+				return data;
+			})
+			.catch(function ( err ) {
+				assert.ifError(err);
 			});
 	});
 
