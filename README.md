@@ -22,6 +22,26 @@ Add this config to your `.stylelintrc`:
 }
 ```
 
+## Presets
+
+In addition to default preset, there are also specific presets. All presets extend default one.
+
+### SCSS
+
+Before using this preset, you need to install [rules for linting SCSS files][stylelint-scss].
+
+```sh
+npm install stylelint-scss --save-dev
+```
+
+```json
+{
+	"extends": [
+		"stylelint-config-niksy/scss"
+	]
+}
+```
+
 ## License
 
 MIT © [Ivan Nikolić](http://ivannikolic.com)
@@ -29,3 +49,4 @@ MIT © [Ivan Nikolić](http://ivannikolic.com)
 [ci]: https://travis-ci.org/niksy/stylelint-config-niksy
 [ci-img]: https://img.shields.io/travis/niksy/stylelint-config-niksy/master.svg
 [stylelint]: http://stylelint.io/
+[stylelint-scss]: https://github.com/kristerkari/stylelint-scss

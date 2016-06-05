@@ -1,4 +1,5 @@
 module.exports = {
+
 	rules: {
 		'string-quotes': ['single', { severity: 'warning' }],
 		'color-hex-case': 'lower',
