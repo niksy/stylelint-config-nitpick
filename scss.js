@@ -4,7 +4,8 @@ module.exports = {
 	].map(require.resolve),
 
 	plugins: [
-		'stylelint-scss'
+		'stylelint-scss',
+		'stylelint-at-rule-no-debug'
 	],
 
 	rules: {
@@ -22,6 +23,9 @@ module.exports = {
 		// @mixin
 		'scss/at-mixin-no-argumentless-call-parentheses': true,
 		'scss/at-mixin-pattern': [/^[\da-z-_]+$/, { severity: 'warning' }],
+
+		// @debug
+		'at-rule-no-debug': [true, { severity: 'warning' }],
 
 		// $variable
 		'scss/dollar-variable-no-missing-interpolation': true,

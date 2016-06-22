@@ -13,6 +13,7 @@
     "test": "eslint {index,test/**/*}.js && mocha test/**/*.js"
   },
   "dependencies": {
+    "stylelint-at-rule-no-debug": "^1.0.3",
     "stylelint-scss": "^1.1.1"
   },
   "devDependencies": {

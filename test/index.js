@@ -46,11 +46,12 @@ describe('Default config', function () {
 describe('SCSS config', function () {
 
 	it('linted code should return proper validation errors', function () {
-		return runStylelint('@import \'path/to/foo.scss\';\n\n@function fooBar {\n\t@return 1;\n}\n', '../scss')
+		return runStylelint('@import \'path/to/foo.scss\';\n\n@function fooBar {\n\t@return 1;\n}\n\na{ @debug 1; }', '../scss')
 			.then(function ( data ) {
 				var errors = data.results[0].warnings;
 				assert.equal(errors[0].rule, 'scss/at-function-pattern');
 				assert.equal(errors[1].rule, 'scss/at-import-no-partial-extension');
+				assert.equal(errors[2].rule, 'at-rule-no-debug');
 				return data;
 			})
 			.catch(function ( err ) {

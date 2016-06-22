@@ -22,9 +22,12 @@ describe('Default config rules presence', function () {
 
 describe('stylelint-scss config rules presence', function () {
 
-	var scssConfig = require('stylelint-scss').default.map(function ( rule ) {
-		return rule.ruleName;
-	});
+	var scssConfig = [].concat(
+		require('stylelint-scss').default.map(function ( rule ) {
+			return rule.ruleName;
+		}),
+		require('stylelint-at-rule-no-debug').ruleName
+	);
 	var customScssConfig = Object.keys(require('../scss').rules);
 
 	it('all default config rules present in custom config', function () {
@@ -34,7 +37,7 @@ describe('stylelint-scss config rules presence', function () {
 
 	it('all custom config rules present in default config', function () {
 		var list = difference(customScssConfig, scssConfig);
-		assert.equal(list.length, 0, 'Following rules are not present in default config: \n' + list.join(', \n'));
+		assert.equal(list.length, 0, 'Following rules are not present in default SCSS config: \n' + list.join(', \n'));
 	});
 
 });
