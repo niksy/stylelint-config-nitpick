@@ -5,7 +5,10 @@ var difference = require('lodash.difference');
 
 describe('Default config rules presence', function () {
 
-	var defaultConfig = Object.keys(require('stylelint').rules);
+	var defaultConfig = [].concat(
+		Object.keys(require('stylelint').rules),
+		require('stylelint-value-border-zero').ruleName
+	);
 	var customConfig = Object.keys(require('../').rules);
 
 	it('all default config rules present in custom config', function () {

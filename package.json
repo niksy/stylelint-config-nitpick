@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "stylelint-at-rule-no-debug": "^1.0.3",
-    "stylelint-scss": "^1.1.1"
+    "stylelint-scss": "^1.1.1",
+    "stylelint-value-border-zero": "^1.0.2"
   },
   "devDependencies": {
     "eslint": "^2.9.0",
@@ -27,7 +28,8 @@
   },
   "peerDependencies": {
     "stylelint-at-rule-no-debug": "^1.0.3",
-    "stylelint-scss": "^1.1.1"
+    "stylelint-scss": "^1.1.1",
+    "stylelint-value-border-zero": "^1.0.2"
   },
   "engines": {
     "node": ">=4"

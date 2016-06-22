@@ -14,6 +14,15 @@ function runStylelint ( code, configFile ) {
 	});
 }
 
+describe('Dependencies', function () {
+
+	it('all "dependencies" are defined in "peerDependencies"', function () {
+		var pkg = require('../package.json');
+		assert.deepStrictEqual(pkg.dependencies, pkg.peerDependencies);
+	});
+
+});
+
 describe('Config format', function () {
 
 	it('config objects should be plain objects', function () {
@@ -27,13 +36,15 @@ describe('Config format', function () {
 describe('Default config', function () {
 
 	it('linted code should return proper validation errors', function () {
-		return runStylelint('a { top: .5em; }\n', '../')
+		return runStylelint('a { top: .5em; border: none; }\n', '../')
 			.then(function ( data ) {
 				var errors = data.results[0].warnings;
 				assert.equal(errors[0].rule, 'number-leading-zero');
-				assert.equal(errors[1].rule, 'declaration-colon-space-after');
-				assert.equal(errors[2].rule, 'block-no-single-line');
-				assert.equal(errors[3].rule, 'selector-no-type');
+				assert.equal(errors[1].rule, 'value-border-zero');
+				assert.equal(errors[2].rule, 'declaration-colon-space-after');
+				assert.equal(errors[3].rule, 'declaration-colon-space-after');
+				assert.equal(errors[4].rule, 'block-no-single-line');
+				assert.equal(errors[5].rule, 'selector-no-type');
 				return data;
 			})
 			.catch(function ( err ) {

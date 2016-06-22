@@ -1,5 +1,9 @@
 module.exports = {
 
+	plugins: [
+		'stylelint-value-border-zero'
+	],
+
 	rules: {
 
 		// Color
@@ -56,6 +60,7 @@ module.exports = {
 
 		// Value
 		'value-no-vendor-prefix': [true, { severity: 'warning' }],
+		'value-border-zero': [{ convention: '0' }, { severity: 'warning' }],
 
 		// Value list
 		'value-keyword-case': 'lower',
