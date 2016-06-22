@@ -28,10 +28,6 @@ In addition to default preset, there are also specific presets. All presets exte
 
 ### SCSS
 
-```sh
-npm install stylelint-scss --save-dev
-```
-
 ```json
 {
 	"extends": [
