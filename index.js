@@ -42,6 +42,9 @@ module.exports = {
 		'string-no-newline': true,
 		'string-quotes': ['single', { severity: 'warning' }],
 
+		// Length
+		'length-zero-no-unit': true,
+
 		// Time
 		'time-no-imperceptible': [true, { severity: 'warning' }],
 
@@ -88,6 +91,10 @@ module.exports = {
 		'declaration-colon-space-after': 'never',
 		'declaration-colon-space-before': 'never',
 		'declaration-no-important': null,
+		'declaration-property-unit-blacklist': null,
+		'declaration-property-unit-whitelist': null,
+		'declaration-property-value-blacklist': null,
+		'declaration-property-value-whitelist': null,
 
 		// Declaration block
 		'declaration-block-no-duplicate-properties': [true, { ignore: ['consecutive-duplicates'] }],
@@ -177,13 +184,16 @@ module.exports = {
 		'media-query-list-comma-space-before': 'never',
 
 		// At-rule
+		'at-rule-blacklist': null,
 		'at-rule-empty-line-before': ['always', {
 			except: ['blockless-group', 'all-nested']
 		}],
 		'at-rule-name-case': 'lower',
+		'at-rule-name-newline-after': ['always-multi-line', { severity: 'warning' }],
 		'at-rule-name-space-after': 'always-single-line',
 		'at-rule-no-vendor-prefix': [true, { severity: 'warning' }],
 		'at-rule-semicolon-newline-after': 'always',
+		'at-rule-whitelist': null,
 
 		// stylelint-disable comment
 		'stylelint-disable-reason': 'always-after',

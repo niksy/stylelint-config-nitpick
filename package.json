@@ -23,9 +23,10 @@
     "lodash": "^4.0.0",
     "lodash.difference": "^4.3.0",
     "mocha": "^2.4.5",
-    "stylelint": "^6.5.1"
+    "stylelint": "^6.7.0"
   },
   "peerDependencies": {
+    "stylelint-at-rule-no-debug": "^1.0.3",
     "stylelint-scss": "^1.1.1"
   },
   "engines": {
