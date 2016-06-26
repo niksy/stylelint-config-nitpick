@@ -1,16 +1,33 @@
-/* eslint-disable global-require */
-
+var fs = require('fs');
+var path = require('path');
 var assert = require('assert');
 var isPlainObject = require('lodash/isPlainObject');
 var stylelint = require('stylelint');
 
-function runStylelint ( code, configFile ) {
+/**
+ * @param  {String} file
+ * @param  {String} configFile
+ *
+ * @return {Promise}
+ */
+function runStylelint ( file, configFile ) {
 	return stylelint.lint({
-		code: code,
+		code: fs.readFileSync(path.join(__dirname, file), 'utf8'),
 		config: require(configFile)
 	})
 	.catch(function ( err ) {
 		throw err;
+	});
+}
+
+/**
+ * @param  {Object[]} errors
+ *
+ * @return {String[]}
+ */
+function mapErrors ( errors ) {
+	return errors.map(function ( warning ) {
+		return warning.rule;
 	});
 }
 
@@ -36,15 +53,15 @@ describe('Config format', function () {
 describe('Default config', function () {
 
 	it('linted code should return proper validation errors', function () {
-		return runStylelint('a { top: .5em; border: none; }\n', '../')
+		return runStylelint('./fixtures/default-config.css', '../')
 			.then(function ( data ) {
-				var errors = data.results[0].warnings;
-				assert.equal(errors[0].rule, 'number-leading-zero');
-				assert.equal(errors[1].rule, 'value-border-zero');
-				assert.equal(errors[2].rule, 'declaration-colon-space-after');
-				assert.equal(errors[3].rule, 'declaration-colon-space-after');
-				assert.equal(errors[4].rule, 'block-no-single-line');
-				assert.equal(errors[5].rule, 'selector-no-type');
+				var errors = mapErrors(data.results[0].warnings);
+				assert.notEqual(errors.indexOf('number-leading-zero'), -1);
+				assert.notEqual(errors.indexOf('value-border-zero'), -1);
+				assert.notEqual(errors.indexOf('declaration-colon-space-after'), -1);
+				assert.notEqual(errors.indexOf('declaration-colon-space-after'), -1);
+				assert.notEqual(errors.indexOf('block-no-single-line'), -1);
+				assert.notEqual(errors.indexOf('selector-no-type'), -1);
 				return data;
 			})
 			.catch(function ( err ) {
@@ -57,12 +74,12 @@ describe('Default config', function () {
 describe('SCSS config', function () {
 
 	it('linted code should return proper validation errors', function () {
-		return runStylelint('@import \'path/to/foo.scss\';\n\n@function fooBar {\n\t@return 1;\n}\n\na{ @debug 1; }', '../scss')
+		return runStylelint('./fixtures/scss-config.scss', '../scss')
 			.then(function ( data ) {
-				var errors = data.results[0].warnings;
-				assert.equal(errors[0].rule, 'scss/at-function-pattern');
-				assert.equal(errors[1].rule, 'scss/at-import-no-partial-extension');
-				assert.equal(errors[2].rule, 'at-rule-no-debug');
+				var errors = mapErrors(data.results[0].warnings);
+				assert.notEqual(errors.indexOf('scss/at-function-pattern'), -1);
+				assert.notEqual(errors.indexOf('scss/at-import-no-partial-extension'), -1);
+				assert.notEqual(errors.indexOf('at-rule-no-debug'), -1);
 				return data;
 			})
 			.catch(function ( err ) {

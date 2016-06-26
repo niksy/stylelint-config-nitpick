@@ -1,0 +1,9 @@
+@import 'path/to/foo.scss';
+
+@function fooBar {
+	@return 1;
+}
+
+a {
+	@debug 1;
+}
