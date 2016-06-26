@@ -1,10 +1,21 @@
 module.exports = {
 
 	plugins: [
-		'stylelint-value-border-zero'
+		'stylelint-value-border-zero',
+		'stylelint-selector-pseudo-class-lvhfa',
+		'stylelint-value-list-box-shadow-inset-first',
+		'stylelint-number-z-index-constraint'
 	],
 
 	rules: {
+
+		// Other
+		'plugin/selector-pseudo-class-lvhfa': [true, { severity: 'warning' }],
+		'plugin/value-list-box-shadow-inset-first': [true, { severity: 'warning' }],
+		'plugin/number-z-index-constraint': {
+			min: 10,
+			max: 9999
+		},
 
 		// Color
 		'color-hex-case': 'lower',

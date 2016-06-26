@@ -62,6 +62,9 @@ describe('Default config', function () {
 				assert.notEqual(errors.indexOf('declaration-colon-space-after'), -1);
 				assert.notEqual(errors.indexOf('block-no-single-line'), -1);
 				assert.notEqual(errors.indexOf('selector-no-type'), -1);
+				assert.notEqual(errors.indexOf('plugin/selector-pseudo-class-lvhfa'), -1);
+				assert.notEqual(errors.indexOf('plugin/value-list-box-shadow-inset-first'), -1);
+				assert.notEqual(errors.indexOf('plugin/number-z-index-constraint'), -1);
 				return data;
 			})
 			.catch(function ( err ) {

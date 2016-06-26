@@ -14,8 +14,11 @@
   },
   "dependencies": {
     "stylelint-at-rule-no-debug": "^1.0.3",
+    "stylelint-number-z-index-constraint": "^1.0.1",
     "stylelint-scss": "^1.1.1",
-    "stylelint-value-border-zero": "^1.0.2"
+    "stylelint-selector-pseudo-class-lvhfa": "^1.0.1",
+    "stylelint-value-border-zero": "^1.0.2",
+    "stylelint-value-list-box-shadow-inset-first": "^1.0.1"
   },
   "devDependencies": {
     "eslint": "^2.9.0",
@@ -24,12 +27,16 @@
     "lodash": "^4.0.0",
     "lodash.difference": "^4.3.0",
     "mocha": "^2.4.5",
-    "stylelint": "^6.7.0"
+    "stylelint": "^6.7.0",
+    "stylelint-value-list-box-shadow-inset-first": "^1.0.1"
   },
   "peerDependencies": {
     "stylelint-at-rule-no-debug": "^1.0.3",
+    "stylelint-number-z-index-constraint": "^1.0.1",
     "stylelint-scss": "^1.1.1",
-    "stylelint-value-border-zero": "^1.0.2"
+    "stylelint-selector-pseudo-class-lvhfa": "^1.0.1",
+    "stylelint-value-border-zero": "^1.0.2",
+    "stylelint-value-list-box-shadow-inset-first": "^1.0.1"
   },
   "engines": {
     "node": ">=4"
