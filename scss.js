@@ -18,8 +18,7 @@ module.exports = {
 
 		// @import
 		'scss/at-import-no-partial-leading-underscore': true,
-		'scss/at-import-no-partial-extension': true,
-		'scss/at-import-partial-extension-blacklist': null,
+		'scss/at-import-partial-extension-blacklist': [['scss', 'sass'], { severity: 'warning' }],
 		'scss/at-import-partial-extension-whitelist': null,
 
 		// @mixin

@@ -81,7 +81,7 @@ describe('SCSS config', function () {
 			.then(function ( data ) {
 				var errors = mapErrors(data.results[0].warnings);
 				assert.notEqual(errors.indexOf('scss/at-function-pattern'), -1);
-				assert.notEqual(errors.indexOf('scss/at-import-no-partial-extension'), -1);
+				assert.notEqual(errors.indexOf('scss/at-import-partial-extension-blacklist'), -1);
 				assert.notEqual(errors.indexOf('at-rule-no-debug'), -1);
 				return data;
 			})

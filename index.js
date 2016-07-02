@@ -51,14 +51,13 @@ module.exports = {
 		'number-leading-zero': 'always',
 		'number-max-precision': 5,
 		'number-no-trailing-zeros': null,
-		'number-zero-length-no-unit': [true, { severity: 'warning' }],
 
 		// String
 		'string-no-newline': true,
 		'string-quotes': ['single', { severity: 'warning' }],
 
 		// Length
-		'length-zero-no-unit': true,
+		'length-zero-no-unit': [true, { severity: 'warning' }],
 
 		// Time
 		'time-no-imperceptible': [true, { severity: 'warning' }],

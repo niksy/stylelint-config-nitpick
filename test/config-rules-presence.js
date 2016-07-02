@@ -2,16 +2,17 @@
 
 var assert = require('assert');
 var difference = require('lodash.difference');
+var without = require('lodash.without');
 
 describe('Default config rules presence', function () {
 
-	var defaultConfig = [].concat(
+	var defaultConfig = without([].concat(
 		Object.keys(require('stylelint').rules),
 		require('stylelint-value-border-zero').ruleName,
 		require('stylelint-selector-pseudo-class-lvhfa').ruleName,
 		require('stylelint-value-list-box-shadow-inset-first').ruleName,
 		require('stylelint-number-z-index-constraint').ruleName
-	);
+	), 'number-zero-length-no-unit');
 	var customConfig = Object.keys(require('../').rules);
 
 	it('all default config rules present in custom config', function () {
@@ -28,13 +29,13 @@ describe('Default config rules presence', function () {
 
 describe('stylelint-scss config rules presence', function () {
 
-	var scssConfig = [].concat(
+	var scssConfig = without([].concat(
 		require('stylelint-scss').default.map(function ( rule ) {
 			return rule.ruleName;
 		}),
 		require('stylelint-at-rule-no-debug').ruleName,
 		'at-rule-no-unknown'
-	);
+	), 'scss/at-import-no-partial-extension');
 	var customScssConfig = Object.keys(require('../scss').rules);
 
 	it('all default config rules present in custom config', function () {
