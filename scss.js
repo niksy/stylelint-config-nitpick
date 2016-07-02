@@ -47,6 +47,9 @@ module.exports = {
 		'at-rule-no-unknown': [true, {
 			ignoreAtRules: ['extend', 'at-root', 'debug', 'warn', 'error', 'if', 'for', 'each', 'while', 'mixin', 'include'],
 			severity: 'warning'
-		}]
+		}],
+
+		// https://github.com/stylelint/stylelint/issues/871
+		'no-browser-hacks': null
 	}
 };

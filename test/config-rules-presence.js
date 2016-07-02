@@ -33,7 +33,8 @@ describe('stylelint-scss config rules presence', function () {
 			return rule.ruleName;
 		}),
 		'at-rule-no-unknown',
-		'at-rule-blacklist'
+		'at-rule-blacklist',
+		'no-browser-hacks'
 	), 'scss/at-import-no-partial-extension');
 	var customScssConfig = Object.keys(require('../scss').rules);
 
