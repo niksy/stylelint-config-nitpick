@@ -1,7 +1,6 @@
 module.exports = {
 
 	plugins: [
-		'stylelint-value-border-zero',
 		'stylelint-selector-pseudo-class-lvhfa',
 		'stylelint-value-list-box-shadow-inset-first',
 		'stylelint-number-z-index-constraint'
@@ -70,7 +69,6 @@ module.exports = {
 
 		// Value
 		'value-no-vendor-prefix': [true, { severity: 'warning' }],
-		'value-border-zero': [{ convention: '0' }, { severity: 'warning' }],
 
 		// Value list
 		'value-keyword-case': 'lower',
@@ -108,7 +106,9 @@ module.exports = {
 		'declaration-no-important': null,
 		'declaration-property-unit-blacklist': null,
 		'declaration-property-unit-whitelist': null,
-		'declaration-property-value-blacklist': null,
+		'declaration-property-value-blacklist': [{
+			'/^border/': ['none']
+		}, { severity: 'warning' }],
 		'declaration-property-value-whitelist': null,
 
 		// Declaration block

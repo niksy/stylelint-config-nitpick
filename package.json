@@ -17,7 +17,6 @@
     "stylelint-number-z-index-constraint": "^1.0.1",
     "stylelint-scss": "^1.1.1",
     "stylelint-selector-pseudo-class-lvhfa": "^1.0.1",
-    "stylelint-value-border-zero": "^1.0.2",
     "stylelint-value-list-box-shadow-inset-first": "^1.0.1"
   },
   "devDependencies": {
@@ -36,7 +35,6 @@
     "stylelint-number-z-index-constraint": "^1.0.1",
     "stylelint-scss": "^1.1.1",
     "stylelint-selector-pseudo-class-lvhfa": "^1.0.1",
-    "stylelint-value-border-zero": "^1.0.2",
     "stylelint-value-list-box-shadow-inset-first": "^1.0.1"
   },
   "engines": {
