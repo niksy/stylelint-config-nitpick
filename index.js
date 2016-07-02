@@ -231,6 +231,7 @@ module.exports = {
 		'no-browser-hacks': [true, { severity: 'warning' }],
 		'no-descending-specificity': [true, { severity: 'warning' }],
 		'no-duplicate-selectors': [true, { severity: 'warning' }],
+		'no-empty-source': [true, { severity: 'warning' }],
 		'no-eol-whitespace': true,
 		'no-extra-semicolons': true,
 		'no-indistinguishable-colors': [true, { severity: 'warning' }],
