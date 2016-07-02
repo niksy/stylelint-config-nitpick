@@ -19,6 +19,8 @@ module.exports = {
 		// @import
 		'scss/at-import-no-partial-leading-underscore': true,
 		'scss/at-import-no-partial-extension': true,
+		'scss/at-import-partial-extension-blacklist': null,
+		'scss/at-import-partial-extension-whitelist': null,
 
 		// @mixin
 		'scss/at-mixin-no-argumentless-call-parentheses': true,
@@ -33,6 +35,12 @@ module.exports = {
 
 		// %placeholder
 		'scss/percent-placeholder-pattern': [/^[\da-z-_]+$/, { severity: 'warning' }],
+
+		// Media feature
+		'scss/media-feature-value-dollar-variable': null,
+
+		// Partial
+		'scss/partial-no-import': null,
 
 		// Selector
 		'scss/selector-no-redundant-nesting-selector': [true, { severity: 'warning' }],
