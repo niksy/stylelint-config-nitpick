@@ -207,6 +207,7 @@ module.exports = {
 		'at-rule-name-case': 'lower',
 		'at-rule-name-newline-after': ['always-multi-line', { severity: 'warning' }],
 		'at-rule-name-space-after': 'always-single-line',
+		'at-rule-no-unknown': [true, { severity: 'warning' }],
 		'at-rule-no-vendor-prefix': [true, { severity: 'warning' }],
 		'at-rule-semicolon-newline-after': 'always',
 		'at-rule-whitelist': null,

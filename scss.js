@@ -35,6 +35,12 @@ module.exports = {
 		'scss/percent-placeholder-pattern': [/^[\da-z-_]+$/, { severity: 'warning' }],
 
 		// Selector
-		'scss/selector-no-redundant-nesting-selector': [true, { severity: 'warning' }]
+		'scss/selector-no-redundant-nesting-selector': [true, { severity: 'warning' }],
+
+		// Other
+		'at-rule-no-unknown': [true, {
+			ignoreAtRules: ['extend', 'at-root', 'debug', 'warn', 'error', 'if', 'for', 'each', 'while', 'mixin', 'include'],
+			severity: 'warning'
+		}]
 	}
 };

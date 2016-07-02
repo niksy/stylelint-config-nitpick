@@ -32,7 +32,8 @@ describe('stylelint-scss config rules presence', function () {
 		require('stylelint-scss').default.map(function ( rule ) {
 			return rule.ruleName;
 		}),
-		require('stylelint-at-rule-no-debug').ruleName
+		require('stylelint-at-rule-no-debug').ruleName,
+		'at-rule-no-unknown'
 	);
 	var customScssConfig = Object.keys(require('../scss').rules);
 
