@@ -57,7 +57,7 @@ describe('Default config', function () {
 			.then(function ( data ) {
 				var errors = mapErrors(data.results[0].warnings);
 				assert.notEqual(errors.indexOf('number-leading-zero'), -1);
-				assert.notEqual(errors.indexOf('value-border-zero'), -1);
+				assert.notEqual(errors.indexOf('declaration-property-value-blacklist'), -1);
 				assert.notEqual(errors.indexOf('declaration-colon-space-after'), -1);
 				assert.notEqual(errors.indexOf('declaration-colon-space-after'), -1);
 				assert.notEqual(errors.indexOf('block-no-single-line'), -1);
@@ -82,7 +82,7 @@ describe('SCSS config', function () {
 				var errors = mapErrors(data.results[0].warnings);
 				assert.notEqual(errors.indexOf('scss/at-function-pattern'), -1);
 				assert.notEqual(errors.indexOf('scss/at-import-partial-extension-blacklist'), -1);
-				assert.notEqual(errors.indexOf('at-rule-no-debug'), -1);
+				assert.notEqual(errors.indexOf('at-rule-blacklist'), -1);
 				return data;
 			})
 			.catch(function ( err ) {

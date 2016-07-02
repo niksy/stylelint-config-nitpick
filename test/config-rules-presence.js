@@ -8,7 +8,6 @@ describe('Default config rules presence', function () {
 
 	var defaultConfig = without([].concat(
 		Object.keys(require('stylelint').rules),
-		require('stylelint-value-border-zero').ruleName,
 		require('stylelint-selector-pseudo-class-lvhfa').ruleName,
 		require('stylelint-value-list-box-shadow-inset-first').ruleName,
 		require('stylelint-number-z-index-constraint').ruleName
@@ -33,8 +32,8 @@ describe('stylelint-scss config rules presence', function () {
 		require('stylelint-scss').default.map(function ( rule ) {
 			return rule.ruleName;
 		}),
-		require('stylelint-at-rule-no-debug').ruleName,
-		'at-rule-no-unknown'
+		'at-rule-no-unknown',
+		'at-rule-blacklist'
 	), 'scss/at-import-no-partial-extension');
 	var customScssConfig = Object.keys(require('../scss').rules);
 
