@@ -31,15 +31,6 @@ function mapErrors ( errors ) {
 	});
 }
 
-describe('Dependencies', function () {
-
-	it('all "dependencies" are defined in "peerDependencies"', function () {
-		var pkg = require('../package.json');
-		assert.deepStrictEqual(pkg.dependencies, pkg.peerDependencies);
-	});
-
-});
-
 describe('Config format', function () {
 
 	it('config objects should be plain objects', function () {
