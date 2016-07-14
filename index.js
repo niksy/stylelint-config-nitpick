@@ -220,7 +220,7 @@ module.exports = {
 		'comment-word-blacklist': null,
 
 		// General / Sheet
-		'indentation': ['tab', { indentInsideParens: ['once'] }],
+		'indentation': ['tab', { indentInsideParens: 'once' }],
 		'max-empty-lines': [1, { severity: 'warning' }],
 		'max-line-length': null,
 		'max-nesting-depth': [4, {
