@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-niksy",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "Stylelint config for my projects.",
   "main": "index.js",
   "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com/)",
