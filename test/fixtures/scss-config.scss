@@ -17,3 +17,9 @@ $map: (
 	'bar': 2,
 	'baz': 3
 );
+
+@if $foo == block {
+	display:block;
+} @else {
+	display:inline-block;
+}

@@ -61,7 +61,7 @@ module.exports = {
 			ignoreAtRules: ['if', 'else']
 		}],
 		'block-closing-brace-newline-after': ['always', {
-			ignoreAtRules: ['else']
+			ignoreAtRules: ['if', 'else']
 		}]
 	}
 };
