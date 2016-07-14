@@ -74,6 +74,7 @@ describe('SCSS config', function () {
 				assert.notEqual(errors.indexOf('scss/at-function-pattern'), -1);
 				assert.notEqual(errors.indexOf('scss/at-import-partial-extension-blacklist'), -1);
 				assert.notEqual(errors.indexOf('at-rule-blacklist'), -1);
+				assert.equal(errors.indexOf('at-rule-no-unknown'), -1);
 				return data;
 			})
 			.catch(function ( err ) {

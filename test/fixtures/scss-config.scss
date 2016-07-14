@@ -4,6 +4,10 @@
 	@return 1;
 }
 
+@mixin foo {
+	@content;
+}
+
 a {
 	@debug 1;
 }

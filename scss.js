@@ -45,11 +45,23 @@ module.exports = {
 
 		// Other
 		'at-rule-no-unknown': [true, {
-			ignoreAtRules: ['extend', 'at-root', 'debug', 'warn', 'error', 'if', 'for', 'each', 'while', 'mixin', 'include'],
+			ignoreAtRules: ['extend', 'at-root', 'debug', 'warn', 'error', 'if', 'else', 'for', 'each', 'while', 'mixin', 'include', 'content', 'return', 'function'],
 			severity: 'warning'
+		}],
+		'at-rule-empty-line-before': ['always', {
+			except: ['blockless-group'],
+			ignore: ['blockless-group', 'after-comment'],
+			ignoreAtRules: ['else']
 		}],
 
 		// https://github.com/stylelint/stylelint/issues/871
-		'no-browser-hacks': null
+		'no-browser-hacks': null,
+
+		'block-opening-brace-newline-after': ['always-multi-line', {
+			ignoreAtRules: ['if', 'else']
+		}],
+		'block-closing-brace-newline-after': ['always', {
+			ignoreAtRules: ['else']
+		}]
 	}
 };

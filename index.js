@@ -203,7 +203,8 @@ module.exports = {
 		// At-rule
 		'at-rule-blacklist': null,
 		'at-rule-empty-line-before': ['always', {
-			except: ['blockless-group', 'all-nested']
+			except: ['blockless-group'],
+			ignore: ['blockless-group', 'after-comment']
 		}],
 		'at-rule-name-case': 'lower',
 		'at-rule-name-newline-after': ['always-multi-line', { severity: 'warning' }],

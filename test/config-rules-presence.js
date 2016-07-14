@@ -34,7 +34,10 @@ describe('stylelint-scss config rules presence', function () {
 		}),
 		'at-rule-no-unknown',
 		'at-rule-blacklist',
-		'no-browser-hacks'
+		'no-browser-hacks',
+		'at-rule-empty-line-before',
+		'block-opening-brace-newline-after',
+		'block-closing-brace-newline-after'
 	), 'scss/at-import-no-partial-extension');
 	var customScssConfig = Object.keys(require('../scss').rules);
 
