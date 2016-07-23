@@ -88,12 +88,9 @@ module.exports = {
 		// Property
 		'property-blacklist': null,
 		'property-case': 'lower',
+		'property-no-unknown': null,
 		'property-no-vendor-prefix': [true, { severity: 'warning' }],
-		'property-unit-blacklist': null,
-		'property-unit-whitelist': null,
 		'property-whitelist': null,
-		'property-value-blacklist': null,
-		'property-value-whitelist': null,
 
 		// Keyframe declaration
 		'keyframe-declaration-no-important': true,
@@ -185,14 +182,12 @@ module.exports = {
 		'media-feature-colon-space-before': 'never',
 		'media-feature-name-no-vendor-prefix': true,
 		'media-feature-no-missing-punctuation': true,
+		'media-feature-parentheses-space-inside': 'never',
 		'media-feature-range-operator-space-after': 'always',
 		'media-feature-range-operator-space-before': 'always',
 
 		// Custom media
 		'custom-media-pattern': null,
-
-		// Media query
-		'media-query-parentheses-space-inside': 'never',
 
 		// Media query list
 		'media-query-list-comma-newline-after': 'always-multi-line',
@@ -223,7 +218,7 @@ module.exports = {
 		'comment-word-blacklist': null,
 
 		// General / Sheet
-		'indentation': ['tab', { indentInsideParens: 'once' }],
+		'indentation': 'tab',
 		'max-empty-lines': [1, { severity: 'warning' }],
 		'max-line-length': null,
 		'max-nesting-depth': [4, {
@@ -238,7 +233,7 @@ module.exports = {
 		'no-extra-semicolons': true,
 		'no-indistinguishable-colors': [true, { severity: 'warning' }],
 		'no-invalid-double-slash-comments': null,
-		'no-missing-eof-newline': true,
+		'no-missing-end-of-source-newline': true,
 		'no-unknown-animations': null,
 		'no-unsupported-browser-features': null
 	}
