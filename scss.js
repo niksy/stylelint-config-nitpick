@@ -3,9 +3,9 @@ module.exports = {
 		'./'
 	].map(require.resolve),
 
-	plugins: [].concat(require('./').plugins, [
+	plugins: [
 		'stylelint-scss'
-	]),
+	],
 
 	rules: {
 
