@@ -99,7 +99,7 @@ module.exports = {
 		'declaration-bang-space-after': 'never',
 		'declaration-bang-space-before': 'always',
 		'declaration-colon-newline-after': ['always-multi-line', { severity: 'warning' }],
-		'declaration-colon-space-after': 'never',
+		'declaration-colon-space-after': 'always',
 		'declaration-colon-space-before': 'never',
 		'declaration-no-important': null,
 		'declaration-property-unit-blacklist': null,
@@ -178,7 +178,7 @@ module.exports = {
 		'rule-non-nested-empty-line-before': ['always', { severity: 'warning' }],
 
 		// Media feature
-		'media-feature-colon-space-after': 'never',
+		'media-feature-colon-space-after': 'always',
 		'media-feature-colon-space-before': 'never',
 		'media-feature-name-no-vendor-prefix': true,
 		'media-feature-no-missing-punctuation': true,
