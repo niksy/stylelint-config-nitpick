@@ -38,7 +38,7 @@ describe('stylelint-scss config rules presence', function () {
 		'at-rule-empty-line-before',
 		'block-opening-brace-newline-after',
 		'block-closing-brace-newline-after'
-	), 'scss/at-import-no-partial-extension');
+	), 'scss/at-import-no-partial-extension', 'scss/at-mixin-no-argumentless-call-parentheses');
 	var customScssConfig = Object.keys(require('../scss').rules);
 
 	it('all default config rules present in custom config', function () {

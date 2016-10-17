@@ -43,6 +43,7 @@ module.exports = {
 		'function-parentheses-space-inside': 'never',
 		'function-url-data-uris': ['never', { severity: 'warning' }],
 		'function-url-no-scheme-relative': null,
+		'function-url-scheme-whitelist': null,
 		'function-url-quotes': ['always', { severity: 'warning' }],
 		'function-whitelist': null,
 		'function-whitespace-after': 'always',
@@ -77,8 +78,10 @@ module.exports = {
 		'value-list-comma-newline-before': null,
 		'value-list-comma-space-after': 'always',
 		'value-list-comma-space-before': 'never',
+		'value-list-max-empty-lines': null,
 
 		// Custom property
+		'custom-property-empty-line-before': null,
 		'custom-property-no-outside-root': [true, { severity: 'warning' }],
 		'custom-property-pattern': null,
 
@@ -101,6 +104,7 @@ module.exports = {
 		'declaration-colon-newline-after': ['always-multi-line', { severity: 'warning' }],
 		'declaration-colon-space-after': 'always',
 		'declaration-colon-space-before': 'never',
+		'declaration-empty-line-before': null,
 		'declaration-no-important': null,
 		'declaration-property-unit-blacklist': null,
 		'declaration-property-unit-whitelist': null,
@@ -112,6 +116,7 @@ module.exports = {
 		// Declaration block
 		'declaration-block-no-duplicate-properties': [true, { ignore: ['consecutive-duplicates'] }],
 		'declaration-block-no-ignored-properties': [true, { severity: 'warning' }],
+		'declaration-block-no-redundant-longhand-properties': [true, { severity: 'warning' }],
 		'declaration-block-no-shorthand-property-overrides': true,
 		'declaration-block-properties-order': null,
 		'declaration-block-semicolon-newline-after': null,
@@ -122,6 +127,7 @@ module.exports = {
 		'declaration-block-trailing-semicolon': 'always',
 
 		// Block
+		'block-closing-brace-empty-line-before': 'never',
 		'block-closing-brace-newline-after': 'always',
 		'block-closing-brace-newline-before': 'always-multi-line',
 		'block-closing-brace-space-after': null,
@@ -143,9 +149,11 @@ module.exports = {
 		'selector-class-pattern': null,
 		'selector-combinator-space-after': 'always',
 		'selector-combinator-space-before': 'always',
+		'selector-descendant-combinator-no-non-space': true,
 		'selector-id-pattern': null,
 		'selector-max-compound-selectors': 4,
 		'selector-max-specificity': ['0,3,0', { severity: 'warning' }],
+		'selector-nested-pattern': null,
 		'selector-no-attribute': null,
 		'selector-no-combinator': null,
 		'selector-no-id': null,
@@ -153,9 +161,11 @@ module.exports = {
 		'selector-no-type': [true, { severity: 'warning' }],
 		'selector-no-universal': [true, { severity: 'warning' }],
 		'selector-no-vendor-prefix': [true, { severity: 'warning' }],
+		'selector-pseudo-class-blacklist': null,
 		'selector-pseudo-class-case': 'lower',
 		'selector-pseudo-class-no-unknown': [true, { severity: 'warning' }],
 		'selector-pseudo-class-parentheses-space-inside': 'never',
+		'selector-pseudo-class-whitelist': null,
 		'selector-pseudo-element-case': 'lower',
 		'selector-pseudo-element-colon-notation': null,
 		'selector-pseudo-element-no-unknown': [true, { severity: 'warning' }],
@@ -180,7 +190,11 @@ module.exports = {
 		// Media feature
 		'media-feature-colon-space-after': 'always',
 		'media-feature-colon-space-before': 'never',
+		'media-feature-name-blacklist': null,
+		'media-feature-name-case': 'lower',
+		'media-feature-name-no-unknown': [true, { severity: 'warning' }],
 		'media-feature-name-no-vendor-prefix': true,
+		'media-feature-name-whitelist': null,
 		'media-feature-no-missing-punctuation': true,
 		'media-feature-parentheses-space-inside': 'never',
 		'media-feature-range-operator-space-after': 'always',
@@ -214,6 +228,7 @@ module.exports = {
 
 		// Comment
 		'comment-empty-line-before': null,
+		'comment-no-empty': null,
 		'comment-whitespace-inside': 'always',
 		'comment-word-blacklist': null,
 

@@ -21,21 +21,34 @@ module.exports = {
 		'scss/at-import-partial-extension-whitelist': null,
 
 		// @mixin
-		'scss/at-mixin-no-argumentless-call-parentheses': true,
+		'scss/at-mixin-argumentless-call-parentheses': ['always', { severity: 'warning' }],
 		'scss/at-mixin-pattern': [/^[\da-z-_]+$/, { severity: 'warning' }],
 
 		// @debug
 		'at-rule-blacklist': [['debug'], { severity: 'warning' }],
 
 		// $variable
+		'scss/dollar-variable-colon-newline-after': null,
+		'scss/dollar-variable-colon-space-after': 'always',
+		'scss/dollar-variable-colon-space-before': 'never',
 		'scss/dollar-variable-no-missing-interpolation': true,
 		'scss/dollar-variable-pattern': [/^[\da-z-_]+$/, { severity: 'warning' }],
 
 		// %placeholder
 		'scss/percent-placeholder-pattern': [/^[\da-z-_]+$/, { severity: 'warning' }],
 
+		// //comment
+		'scss/double-slash-comment-empty-line-before': null,
+		'scss/double-slash-comment-inline': null,
+		'scss/double-slash-comment-whitespace-inside': 'always',
+
 		// Media feature
 		'scss/media-feature-value-dollar-variable': null,
+
+		// Operator
+		'scss/operator-no-newline-after': true,
+		'scss/operator-no-newline-before': true,
+		'scss/operator-no-unspaced': true,
 
 		// Partial
 		'scss/partial-no-import': null,
