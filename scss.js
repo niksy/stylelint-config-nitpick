@@ -75,6 +75,8 @@ module.exports = {
 		}],
 		'block-closing-brace-newline-after': ['always', {
 			ignoreAtRules: ['if', 'else']
-		}]
+		}],
+
+		'no-duplicate-selectors': null
 	}
 };
