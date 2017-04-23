@@ -1,8 +1,10 @@
-var fs = require('fs');
-var path = require('path');
-var assert = require('assert');
-var isPlainObject = require('lodash/isPlainObject');
-var stylelint = require('stylelint');
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+const assert = require('assert');
+const isPlainObject = require('lodash/isPlainObject');
+const stylelint = require('stylelint');
 
 /**
  * @param  {String} file
@@ -15,7 +17,7 @@ function runStylelint ( file, configFile ) {
 		code: fs.readFileSync(path.join(__dirname, file), 'utf8'),
 		config: require(configFile)
 	})
-	.catch(function ( err ) {
+	.catch(( err ) => {
 		throw err;
 	});
 }
@@ -26,15 +28,15 @@ function runStylelint ( file, configFile ) {
  * @return {String[]}
  */
 function mapErrors ( errors ) {
-	return errors.map(function ( warning ) {
+	return errors.map(( warning ) => {
 		return warning.rule;
 	});
 }
 
 describe('Config format', function () {
 
-	it('config objects should be plain objects', function () {
-		var config = require('../');
+	it('should have config objects as plain objects', function () {
+		const config = require('../');
 		assert.ok(isPlainObject(config));
 		assert.ok(isPlainObject(config.rules));
 	});
@@ -43,10 +45,10 @@ describe('Config format', function () {
 
 describe('Default config', function () {
 
-	it('linted code should return proper validation errors', function () {
+	it('should return proper validation errors for linted code', function () {
 		return runStylelint('./fixtures/default-config.css', '../')
-			.then(function ( data ) {
-				var errors = mapErrors(data.results[0].warnings);
+			.then(( data ) => {
+				const errors = mapErrors(data.results[0].warnings);
 				assert.notEqual(errors.indexOf('number-leading-zero'), -1);
 				assert.notEqual(errors.indexOf('declaration-property-value-blacklist'), -1);
 				assert.notEqual(errors.indexOf('declaration-colon-space-after'), -1);
@@ -56,7 +58,7 @@ describe('Default config', function () {
 				assert.notEqual(errors.indexOf('plugin/number-z-index-constraint'), -1);
 				return data;
 			})
-			.catch(function ( err ) {
+			.catch(( err ) => {
 				assert.ifError(err);
 			});
 	});
@@ -65,10 +67,10 @@ describe('Default config', function () {
 
 describe('SCSS config', function () {
 
-	it('linted code should return proper validation errors', function () {
+	it('should return proper validation errors for linted code', function () {
 		return runStylelint('./fixtures/scss-config.scss', '../scss')
-			.then(function ( data ) {
-				var errors = mapErrors(data.results[0].warnings);
+			.then(( data ) => {
+				const errors = mapErrors(data.results[0].warnings);
 				assert.notEqual(errors.indexOf('scss/at-function-pattern'), -1);
 				assert.notEqual(errors.indexOf('scss/at-import-partial-extension-blacklist'), -1);
 				assert.notEqual(errors.indexOf('at-rule-blacklist'), -1);
@@ -76,7 +78,7 @@ describe('SCSS config', function () {
 				assert.equal(errors.indexOf('block-closing-brace-newline-after'), -1);
 				return data;
 			})
-			.catch(function ( err ) {
+			.catch(( err ) => {
 				assert.ifError(err);
 			});
 	});

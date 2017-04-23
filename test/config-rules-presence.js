@@ -1,12 +1,12 @@
-/* eslint-disable global-require */
+'use strict';
 
-var assert = require('assert');
-var difference = require('lodash.difference');
-var without = require('lodash.without');
+const assert = require('assert');
+const difference = require('lodash.difference');
+const without = require('lodash.without');
 
 describe('Default config rules presence', function () {
 
-	var defaultConfig = without([].concat(
+	const defaultConfig = without([].concat(
 		Object.keys(require('stylelint').rules),
 		require('stylelint-selector-pseudo-class-lvhfa').ruleName,
 		require('stylelint-value-list-box-shadow-inset-first').ruleName,
@@ -29,23 +29,23 @@ describe('Default config rules presence', function () {
 		'stylelint-disable-reason',
 		'no-browser-hacks'
 	);
-	var customConfig = Object.keys(require('../').rules);
+	const customConfig = Object.keys(require('../').rules);
 
-	it('all default config rules present in custom config', function () {
-		var list = difference(defaultConfig, customConfig);
-		assert.equal(list.length, 0, 'Following rules are not present in custom config and must be added: \n' + list.join(', \n'));
+	it('should have all default config rules present in custom config', function () {
+		const list = difference(defaultConfig, customConfig);
+		assert.equal(list.length, 0, `Following rules are not present in custom config and must be added: \n${list.join(', \n')}`);
 	});
 
-	it('all custom config rules present in default config', function () {
-		var list = difference(customConfig, defaultConfig);
-		assert.equal(list.length, 0, 'Following rules are not present in default config and must be removed: \n' + list.join(', \n'));
+	it('should have all custom config rules present in default config', function () {
+		const list = difference(customConfig, defaultConfig);
+		assert.equal(list.length, 0, `Following rules are not present in default config and must be removed: \n${list.join(', \n')}`);
 	});
 
 });
 
-describe('stylelint-scss config rules presence', function () {
+describe('Plugin: stylelint-scss config rules presence', function () {
 
-	var scssConfig = without([].concat(
+	const scssConfig = without([].concat(
 		require('stylelint-scss').default.map(function ( rule ) {
 			return rule.ruleName;
 		}),
@@ -57,16 +57,16 @@ describe('stylelint-scss config rules presence', function () {
 		'block-closing-brace-newline-after',
 		'no-duplicate-selectors'
 	), 'scss/at-import-no-partial-extension', 'scss/at-mixin-no-argumentless-call-parentheses');
-	var customScssConfig = Object.keys(require('../scss').rules);
+	const customScssConfig = Object.keys(require('../scss').rules);
 
-	it('all default config rules present in custom config', function () {
-		var list = difference(scssConfig, customScssConfig);
-		assert.equal(list.length, 0, 'Following rules are not present in custom config and must be added: \n' + list.join(', \n'));
+	it('should have all default config rules present in custom config', function () {
+		const list = difference(scssConfig, customScssConfig);
+		assert.equal(list.length, 0, `Following rules are not present in custom config and must be added: \n${list.join(', \n')}`);
 	});
 
-	it('all custom config rules present in default config', function () {
-		var list = difference(customScssConfig, scssConfig);
-		assert.equal(list.length, 0, 'Following rules are not present in default SCSS config and must be removed: \n' + list.join(', \n'));
+	it('should have all custom config rules present in default config', function () {
+		const list = difference(customScssConfig, scssConfig);
+		assert.equal(list.length, 0, `Following rules are not present in default SCSS config and must be removed: \n${list.join(', \n')}`);
 	});
 
 });

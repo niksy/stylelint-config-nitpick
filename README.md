@@ -41,5 +41,4 @@ In addition to default preset, there are also specific presets. All presets exte
 MIT © [Ivan Nikolić](http://ivannikolic.com)
 
 [ci]: https://travis-ci.org/niksy/stylelint-config-niksy
-[ci-img]: https://img.shields.io/travis/niksy/stylelint-config-niksy/master.svg
-[stylelint]: http://stylelint.io/
+[ci-img]: https://travis-ci.org/niksy/stylelint-config-niksy.svg?branch=master
