@@ -111,7 +111,8 @@ module.exports = {
 		'declaration-property-unit-blacklist': null,
 		'declaration-property-unit-whitelist': null,
 		'declaration-property-value-blacklist': [{
-			'/^border/': ['none']
+			'/^border/': ['none'],
+			'/^outline/': ['none']
 		}, { severity: 'warning' }],
 		'declaration-property-value-whitelist': null,
 
