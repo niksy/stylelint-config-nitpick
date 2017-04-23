@@ -56,6 +56,7 @@ describe('Default config', function () {
 				assert.notEqual(errors.indexOf('plugin/selector-pseudo-class-lvhfa'), -1);
 				assert.notEqual(errors.indexOf('plugin/value-list-box-shadow-inset-first'), -1);
 				assert.notEqual(errors.indexOf('plugin/number-z-index-constraint'), -1);
+				assert.notEqual(errors.indexOf('order/properties-order'), -1);
 				return data;
 			})
 			.catch(( err ) => {
@@ -74,6 +75,7 @@ describe('SCSS config', function () {
 				assert.notEqual(errors.indexOf('scss/at-function-pattern'), -1);
 				assert.notEqual(errors.indexOf('scss/at-import-partial-extension-blacklist'), -1);
 				assert.notEqual(errors.indexOf('at-rule-blacklist'), -1);
+				assert.notEqual(errors.indexOf('order/order'), -1);
 				assert.equal(errors.indexOf('at-rule-no-unknown'), -1);
 				assert.equal(errors.indexOf('block-closing-brace-newline-after'), -1);
 				return data;

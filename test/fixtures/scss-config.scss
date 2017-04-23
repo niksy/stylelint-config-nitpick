@@ -23,3 +23,8 @@ $map: (
 } @else {
 	display:inline-block;
 }
+
+a {
+	color: red;
+	@include foobar;
+}

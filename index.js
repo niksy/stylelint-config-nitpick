@@ -5,7 +5,8 @@ module.exports = {
 	plugins: [
 		'stylelint-selector-pseudo-class-lvhfa',
 		'stylelint-value-list-box-shadow-inset-first',
-		'stylelint-number-z-index-constraint'
+		'stylelint-number-z-index-constraint',
+		'stylelint-order'
 	],
 
 	rules: {
@@ -17,6 +18,60 @@ module.exports = {
 			min: 10,
 			max: 9999
 		},
+
+		'order/order': [[
+			'custom-properties',
+			'dollar-variables',
+			{
+				type: 'at-rule',
+				name: 'extend'
+			},
+			{
+				type: 'at-rule',
+				name: 'include'
+			},
+			{
+				type: 'at-rule',
+				name: 'include',
+				hasBlock: true
+			},
+			'at-variables',
+			'declarations',
+			'rules',
+			{
+				type: 'rule',
+				selector: /^&:[\w-]+$/
+			},
+			'at-rules',
+			{
+				type: 'at-rule',
+				name: 'media',
+				hasBlock: true
+			},
+			'less-mixins'
+		], { unspecified: 'bottom' }],
+		'order/properties-order': [[
+			'content',
+			'box-sizing',
+			'display',
+			'position', 'top', 'right', 'bottom', 'left', 'z-index',
+			'width', 'height', 'min-width', 'min-height', 'max-width', 'max-height',
+			'float', 'clear',
+			'flex',
+			'columns', 'column',
+			'grid',
+			'margin', 'margin-top', 'margin-right', 'margin-bottom', 'margin-left',
+			'padding', 'padding-top', 'padding-right', 'padding-bottom', 'padding-left',
+			'border', 'border-top', 'border-right', 'border-bottom', 'border-left', 'border-top-left-radius', 'border-top-right-radius', 'border-bottom-right-radius', 'border-bottom-left-radius',
+			'overflow',
+			'visibility', 'opacity',
+			'font', 'font-style', 'font-weight', 'font-size', 'line-height', 'font-family', 'vertical-align', 'text-align', 'text-transform', 'text', 'white-space', 'word-spacing', 'letter-spacing',
+			'background', 'background-color', 'background-image', 'background-repeat', 'background-position', 'background-size',
+			'color',
+			'box-shadow',
+			'transform',
+			'transition', 'animation'
+		], { unspecified: 'bottom' }],
 
 		// Color
 		'color-hex-case': 'lower',
