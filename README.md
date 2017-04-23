@@ -42,3 +42,4 @@ MIT © [Ivan Nikolić](http://ivannikolic.com)
 
 [ci]: https://travis-ci.org/niksy/stylelint-config-niksy
 [ci-img]: https://travis-ci.org/niksy/stylelint-config-niksy.svg?branch=master
+[stylelint]: http://stylelint.io/
