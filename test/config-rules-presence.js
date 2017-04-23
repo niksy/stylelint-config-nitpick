@@ -11,7 +11,24 @@ describe('Default config rules presence', function () {
 		require('stylelint-selector-pseudo-class-lvhfa').ruleName,
 		require('stylelint-value-list-box-shadow-inset-first').ruleName,
 		require('stylelint-number-z-index-constraint').ruleName
-	), 'number-zero-length-no-unit');
+	),
+		'number-zero-length-no-unit',
+		'no-indistinguishable-colors',
+		'no-unsupported-browser-features',
+		'time-no-imperceptible',
+		'custom-property-no-outside-root',
+		'declaration-block-no-ignored-properties',
+		'declaration-block-properties-order',
+		'block-no-single-line',
+		'selector-no-empty',
+		'selector-root-no-composition',
+		'root-no-standard-properties',
+		'rule-nested-empty-line-before',
+		'rule-non-nested-empty-line-before',
+		'media-feature-no-missing-punctuation',
+		'stylelint-disable-reason',
+		'no-browser-hacks'
+	);
 	var customConfig = Object.keys(require('../').rules);
 
 	it('all default config rules present in custom config', function () {

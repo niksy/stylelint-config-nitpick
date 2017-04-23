@@ -9,11 +9,20 @@ module.exports = {
 
 	rules: {
 
+		// @else
+		'scss/at-else-closing-brace-newline-after': true,
+		'scss/at-else-closing-brace-space-after': ['always-intermediate', { severity: 'warning' }],
+		'scss/at-else-empty-line-before': ['never', { severity: 'warning' }],
+
 		// @extend
 		'scss/at-extend-no-missing-placeholder': true,
 
 		// @function
 		'scss/at-function-pattern': [/^[\da-z-_]+$/, { severity: 'warning' }],
+
+		// @if
+		'scss/at-if-closing-brace-newline-after': true,
+		'scss/at-if-closing-brace-space-after': ['always-intermediate', { severity: 'warning' }],
 
 		// @import
 		'scss/at-import-no-partial-leading-underscore': true,
@@ -31,6 +40,7 @@ module.exports = {
 		'scss/dollar-variable-colon-newline-after': null,
 		'scss/dollar-variable-colon-space-after': 'always',
 		'scss/dollar-variable-colon-space-before': 'never',
+		'scss/dollar-variable-empty-line-before': 'never',
 		'scss/dollar-variable-no-missing-interpolation': true,
 		'scss/dollar-variable-pattern': [/^[\da-z-_]+$/, { severity: 'warning' }],
 
@@ -41,6 +51,10 @@ module.exports = {
 		'scss/double-slash-comment-empty-line-before': null,
 		'scss/double-slash-comment-inline': null,
 		'scss/double-slash-comment-whitespace-inside': 'always',
+
+		// Declaration
+		'scss/declaration-nested-properties': 'never',
+		'scss/declaration-nested-properties-no-divided-groups': null,
 
 		// Media feature
 		'scss/media-feature-value-dollar-variable': null,
