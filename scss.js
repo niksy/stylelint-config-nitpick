@@ -12,7 +12,7 @@ module.exports = {
 	rules: {
 
 		// @else
-		'scss/at-else-closing-brace-newline-after': true,
+		'scss/at-else-closing-brace-newline-after': 'always-last-in-chain',
 		'scss/at-else-closing-brace-space-after': ['always-intermediate', { severity: 'warning' }],
 		'scss/at-else-empty-line-before': ['never', { severity: 'warning' }],
 
@@ -23,7 +23,7 @@ module.exports = {
 		'scss/at-function-pattern': [/^[\da-z-_]+$/, { severity: 'warning' }],
 
 		// @if
-		'scss/at-if-closing-brace-newline-after': true,
+		'scss/at-if-closing-brace-newline-after': 'always-last-in-chain',
 		'scss/at-if-closing-brace-space-after': ['always-intermediate', { severity: 'warning' }],
 
 		// @import
@@ -74,13 +74,13 @@ module.exports = {
 
 		// Other
 		'at-rule-no-unknown': [true, {
-			ignoreAtRules: ['extend', 'at-root', 'debug', 'warn', 'error', 'if', 'else', 'for', 'each', 'while', 'mixin', 'include', 'content', 'return', 'function'],
-			severity: 'warning'
+			severity: 'warning',
+			ignoreAtRules: ['extend', 'at-root', 'debug', 'warn', 'error', 'if', 'else', 'for', 'each', 'while', 'mixin', 'include', 'content', 'return', 'function']
 		}],
 		'at-rule-empty-line-before': ['always', {
-			except: ['blockless-group'],
-			ignore: ['blockless-group', 'after-comment'],
-			ignoreAtRules: ['else']
+			except: ['blockless-after-blockless'],
+			ignore: ['blockless-after-blockless', 'after-comment'],
+			ignoreAtRules: ['if', 'else']
 		}],
 
 		// https://github.com/stylelint/stylelint/issues/871

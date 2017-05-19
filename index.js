@@ -184,7 +184,7 @@ module.exports = {
 
 		// Block
 		'block-closing-brace-empty-line-before': 'never',
-		'block-closing-brace-newline-after': ['always', { ignoreAtRules: ['else', 'if'] }],
+		'block-closing-brace-newline-after': 'always',
 		'block-closing-brace-newline-before': 'always',
 		'block-closing-brace-space-after': null,
 		'block-closing-brace-space-before': 'always-single-line',
@@ -262,8 +262,7 @@ module.exports = {
 		'at-rule-blacklist': null,
 		'at-rule-empty-line-before': ['always', {
 			except: ['blockless-after-blockless'],
-			ignore: ['blockless-after-blockless', 'after-comment'],
-			ignoreAtRules: ['else', 'if']
+			ignore: ['blockless-after-blockless', 'after-comment']
 		}],
 		'at-rule-name-case': 'lower',
 		'at-rule-name-newline-after': ['always-multi-line', { severity: 'warning' }],
