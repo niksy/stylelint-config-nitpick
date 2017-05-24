@@ -35,19 +35,24 @@ module.exports = {
 				name: 'include',
 				hasBlock: true
 			},
-			'at-variables',
+			'at-rules',
 			'declarations',
-			'rules',
 			{
 				type: 'rule',
-				selector: /^&:[\w-]+$/
+				selector: /^&::?[\w-]+$/
 			},
-			'at-rules',
+			'rules',
 			{
 				type: 'at-rule',
 				name: 'media',
 				hasBlock: true
 			},
+			{
+				type: 'at-rule',
+				name: 'supports',
+				hasBlock: true
+			},
+			'at-variables',
 			'less-mixins'
 		], { unspecified: 'bottom' }],
 		'order/properties-order': [[
