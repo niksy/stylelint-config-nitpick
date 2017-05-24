@@ -8,17 +8,34 @@ const stylelint = require('stylelint');
 
 /**
  * @param  {String} file
+ * @param  {Object} config
+ *
+ * @return {Promise}
+ */
+function runStylelint ( file, config ) {
+	return stylelint.lint({
+		code: fs.readFileSync(path.join(__dirname, file), 'utf8'),
+		config: config
+	})
+	.catch(( err ) => {
+		throw err;
+	});
+}
+
+/**
  * @param  {String} configFile
  *
  * @return {Promise}
  */
-function runStylelint ( file, configFile ) {
+function validateConfiguration ( configFile ) {
 	return stylelint.lint({
-		code: fs.readFileSync(path.join(__dirname, file), 'utf8'),
+		code: '',
 		config: require(configFile)
 	})
-	.catch(( err ) => {
-		throw err;
+	.then(( data ) => {
+		return [].concat(data.results[0].deprecations, data.results[0].invalidOptionWarnings);
+	}, () => {
+		return [];
 	});
 }
 
@@ -33,7 +50,7 @@ function mapErrors ( errors ) {
 	});
 }
 
-describe('Config format', function () {
+describe('Default config', function () {
 
 	it('should have config objects as plain objects', function () {
 		const config = require('../');
@@ -41,12 +58,17 @@ describe('Config format', function () {
 		assert.ok(isPlainObject(config.rules));
 	});
 
-});
-
-describe('Default config', function () {
+	it('should not have invalid options or deprecation warnings', function () {
+		return validateConfiguration('../')
+			.then(( errors ) => {
+				assert.equal(errors.length, 0);
+			});
+	});
 
 	it('should return proper validation errors for linted code', function () {
-		return runStylelint('./fixtures/default-config.css', '../')
+		return runStylelint('./fixtures/default.config.css', {
+			'extends': require.resolve('../')
+		})
 			.then(( data ) => {
 				const errors = mapErrors(data.results[0].warnings);
 				assert.notEqual(errors.indexOf('number-leading-zero'), -1);
@@ -68,14 +90,28 @@ describe('Default config', function () {
 
 describe('SCSS config', function () {
 
+	it('should have config objects as plain objects', function () {
+		const config = require('../scss');
+		assert.ok(isPlainObject(config));
+		assert.ok(isPlainObject(config.rules));
+	});
+
+	it('should not have invalid options or deprecation warnings', function () {
+		return validateConfiguration('../scss')
+			.then(( errors ) => {
+				assert.equal(errors.length, 0);
+			});
+	});
+
 	it('should return proper validation errors for linted code', function () {
-		return runStylelint('./fixtures/scss-config.scss', '../scss')
+		return runStylelint('./fixtures/scss.config.scss', {
+			'extends': require.resolve('../scss')
+		})
 			.then(( data ) => {
 				const errors = mapErrors(data.results[0].warnings);
 				assert.notEqual(errors.indexOf('scss/at-function-pattern'), -1);
 				assert.notEqual(errors.indexOf('scss/at-import-partial-extension-blacklist'), -1);
 				assert.notEqual(errors.indexOf('at-rule-blacklist'), -1);
-				assert.notEqual(errors.indexOf('order/order'), -1);
 				assert.equal(errors.indexOf('at-rule-no-unknown'), -1);
 				assert.equal(errors.indexOf('block-closing-brace-newline-after'), -1);
 				return data;
