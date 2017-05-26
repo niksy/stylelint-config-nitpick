@@ -39,7 +39,7 @@ module.exports = {
 		'scss/dollar-variable-colon-newline-after': null,
 		'scss/dollar-variable-colon-space-after': 'always',
 		'scss/dollar-variable-colon-space-before': 'never',
-		'scss/dollar-variable-empty-line-before': 'never',
+		'scss/dollar-variable-empty-line-before': ['never', { except: ['after-comment'] }],
 		'scss/dollar-variable-no-missing-interpolation': true,
 		'scss/dollar-variable-pattern': [/^[\da-z-_]+$/, { severity: 'warning' }],
 
