@@ -88,6 +88,7 @@ module.exports = {
 		// Font family
 		'font-family-name-quotes': ['always-where-recommended', { severity: 'warning' }],
 		'font-family-no-duplicate-names': true,
+		'font-family-no-missing-generic-family-keyword': true,
 
 		// Font weight
 		'font-weight-notation': 'named-where-possible',
@@ -106,6 +107,7 @@ module.exports = {
 		'function-parentheses-space-inside': 'never',
 		'function-url-no-scheme-relative': null,
 		'function-url-scheme-whitelist': null,
+		'function-url-scheme-blacklist': null,
 		'function-url-quotes': ['always', { severity: 'warning' }],
 		'function-whitelist': null,
 		'function-whitespace-after': 'always',
@@ -226,6 +228,17 @@ module.exports = {
 		'selector-type-case': 'lower',
 		'selector-type-no-unknown': [true, { severity: 'warning' }],
 		'selector-max-empty-lines': 0,
+		'selector-combinator-blacklist': [['>', '~', '+'], { severity: 'warning' }],
+		'selector-combinator-whitelist': null,
+		'selector-max-attribute': null,
+		'selector-max-class': [3, { severity: 'warning' }],
+		'selector-max-combinators': 3,
+		'selector-max-id': 1,
+		'selector-max-pseudo-class': [3, { severity: 'warning' }],
+		'selector-max-type': 3,
+		'selector-max-universal': 1,
+		'selector-pseudo-element-blacklist': null,
+		'selector-pseudo-element-whitelist': null,
 
 		// Selector list
 		'selector-list-comma-newline-after': 'always-multi-line',
@@ -293,6 +306,7 @@ module.exports = {
 		'no-extra-semicolons': true,
 		'no-invalid-double-slash-comments': null,
 		'no-missing-end-of-source-newline': true,
-		'no-unknown-animations': null
+		'no-unknown-animations': null,
+		'no-duplicate-at-import-rules': true
 	}
 };

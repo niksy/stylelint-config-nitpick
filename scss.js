@@ -12,12 +12,15 @@ module.exports = {
 		'scss/at-else-closing-brace-newline-after': 'always-last-in-chain',
 		'scss/at-else-closing-brace-space-after': ['always-intermediate', { severity: 'warning' }],
 		'scss/at-else-empty-line-before': ['never', { severity: 'warning' }],
+		'scss/at-else-if-parentheses-space-before': ['always'],
 
 		// @extend
 		'scss/at-extend-no-missing-placeholder': true,
 
 		// @function
 		'scss/at-function-pattern': [/^[\da-z-_]+$/, { severity: 'warning' }],
+		'scss/at-function-named-arguments': ['always', { ignore: ['single-argument'], severity: 'warning' }],
+		'scss/at-function-parentheses-space-before': 'always',
 
 		// @if
 		'scss/at-if-closing-brace-newline-after': 'always-last-in-chain',
@@ -31,6 +34,12 @@ module.exports = {
 		// @mixin
 		'scss/at-mixin-argumentless-call-parentheses': ['always', { severity: 'warning' }],
 		'scss/at-mixin-pattern': [/^[\da-z-_]+$/, { severity: 'warning' }],
+		'scss/at-mixin-named-arguments': ['always', { ignore: ['single-argument'], severity: 'warning' }],
+		'scss/at-mixin-parentheses-space-before': 'always',
+
+		// @rule
+		'at-rule-no-unknown': null,
+		'scss/at-rule-no-unknown': [true, { severity: 'warning' }],
 
 		// @debug
 		'at-rule-blacklist': [['debug'], { severity: 'warning' }],
@@ -42,6 +51,7 @@ module.exports = {
 		'scss/dollar-variable-empty-line-before': ['never', { except: ['after-comment'] }],
 		'scss/dollar-variable-no-missing-interpolation': true,
 		'scss/dollar-variable-pattern': [/^[\da-z-_]+$/, { severity: 'warning' }],
+		'scss/dollar-variable-default': null,
 
 		// %placeholder
 		'scss/percent-placeholder-pattern': [/^[\da-z-_]+$/, { severity: 'warning' }],
@@ -69,11 +79,10 @@ module.exports = {
 		// Selector
 		'scss/selector-no-redundant-nesting-selector': [true, { severity: 'warning' }],
 
+		// General / Sheet
+		'scss/no-duplicate-dollar-variables': true,
+
 		// Other
-		'at-rule-no-unknown': [true, {
-			severity: 'warning',
-			ignoreAtRules: ['extend', 'at-root', 'debug', 'warn', 'error', 'if', 'else', 'for', 'each', 'while', 'mixin', 'include', 'content', 'return', 'function']
-		}],
 		'at-rule-empty-line-before': ['always', {
 			except: ['blockless-after-blockless'],
 			ignore: ['blockless-after-blockless', 'after-comment'],
