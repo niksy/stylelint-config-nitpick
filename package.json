@@ -5,6 +5,12 @@
   "main": "index.js",
   "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com)",
   "license": "MIT",
+  "files": [
+    "index.js",
+    "scss.js",
+    "LICENSE.md",
+    "README.md"
+  ],
   "directories": {
     "test": "test"
   },
