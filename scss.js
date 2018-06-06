@@ -80,9 +80,6 @@ module.exports = {
 			ignoreAtRules: ['if', 'else']
 		}],
 
-		// https://github.com/stylelint/stylelint/issues/871
-		'no-browser-hacks': null,
-
 		'block-opening-brace-newline-after': ['always-multi-line', {
 			ignoreAtRules: ['if', 'else']
 		}],

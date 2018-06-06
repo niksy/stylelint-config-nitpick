@@ -60,7 +60,6 @@ describe('SCSS config rules presence', function () {
 		}),
 		'at-rule-no-unknown',
 		'at-rule-blacklist',
-		'no-browser-hacks',
 		'at-rule-empty-line-before',
 		'block-opening-brace-newline-after',
 		'block-closing-brace-newline-after',
