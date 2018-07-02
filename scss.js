@@ -50,7 +50,7 @@ module.exports = {
 		'scss/dollar-variable-colon-space-before': 'never',
 		'scss/dollar-variable-empty-line-before': ['always', { except: ['first-nested', 'after-comment', 'after-dollar-variable'] }],
 		'scss/dollar-variable-no-missing-interpolation': true,
-		'scss/dollar-variable-pattern': [/^[\da-z-_]+$/, { severity: 'warning' }],
+		'scss/dollar-variable-pattern': [/^[a-z]+(?:-[a-z]+)*$/, { severity: 'warning', message: 'SCSS variable should be defined in dash-case format' }],
 		'scss/dollar-variable-default': null,
 
 		// %placeholder
