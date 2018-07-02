@@ -112,6 +112,9 @@ module.exports = {
 		'function-whitelist': null,
 		'function-whitespace-after': 'always',
 
+		// Keyframes
+		'keyframes-name-pattern': null,
+
 		// Number
 		'number-leading-zero': 'always',
 		'number-max-precision': 5,
@@ -260,6 +263,7 @@ module.exports = {
 		'media-feature-parentheses-space-inside': 'never',
 		'media-feature-range-operator-space-after': 'always',
 		'media-feature-range-operator-space-before': 'always',
+		'media-feature-name-value-whitelist': null,
 
 		// Custom media
 		'custom-media-pattern': null,
