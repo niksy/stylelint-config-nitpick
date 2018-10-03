@@ -12,8 +12,8 @@ module.exports = {
 	rules: {
 
 		// Other
-		'plugin/selector-pseudo-class-lvhfa': [true, { severity: 'warning' }],
-		'plugin/value-list-box-shadow-inset-first': [true, { severity: 'warning' }],
+		'plugin/selector-pseudo-class-lvhfa': [ true, { severity: 'warning' }],
+		'plugin/value-list-box-shadow-inset-first': [ true, { severity: 'warning' }],
 		'plugin/number-z-index-constraint': {
 			min: 10,
 			max: 9999
@@ -59,34 +59,81 @@ module.exports = {
 			'content',
 			'box-sizing',
 			'display',
-			'position', 'top', 'right', 'bottom', 'left', 'z-index',
-			'width', 'height', 'min-width', 'min-height', 'max-width', 'max-height',
-			'float', 'clear',
+			'position',
+			'top',
+			'right',
+			'bottom',
+			'left',
+			'z-index',
+			'width',
+			'height',
+			'min-width',
+			'min-height',
+			'max-width',
+			'max-height',
+			'float',
+			'clear',
 			'flex',
-			'columns', 'column',
+			'columns',
+			'column',
 			'grid',
-			'margin', 'margin-top', 'margin-right', 'margin-bottom', 'margin-left',
-			'padding', 'padding-top', 'padding-right', 'padding-bottom', 'padding-left',
-			'border', 'border-top', 'border-right', 'border-bottom', 'border-left', 'border-top-left-radius', 'border-top-right-radius', 'border-bottom-right-radius', 'border-bottom-left-radius',
+			'margin',
+			'margin-top',
+			'margin-right',
+			'margin-bottom',
+			'margin-left',
+			'padding',
+			'padding-top',
+			'padding-right',
+			'padding-bottom',
+			'padding-left',
+			'border',
+			'border-top',
+			'border-right',
+			'border-bottom',
+			'border-left',
+			'border-top-left-radius',
+			'border-top-right-radius',
+			'border-bottom-right-radius',
+			'border-bottom-left-radius',
 			'overflow',
-			'visibility', 'opacity',
-			'font', 'font-style', 'font-weight', 'font-size', 'line-height', 'font-family', 'vertical-align', 'text-align', 'text-transform', 'text', 'white-space', 'word-spacing', 'letter-spacing',
-			'background', 'background-color', 'background-image', 'background-repeat', 'background-position', 'background-size',
+			'visibility',
+			'opacity',
+			'font',
+			'font-style',
+			'font-weight',
+			'font-size',
+			'line-height',
+			'font-family',
+			'vertical-align',
+			'text-align',
+			'text-transform',
+			'text',
+			'white-space',
+			'word-spacing',
+			'letter-spacing',
+			'background',
+			'background-color',
+			'background-image',
+			'background-repeat',
+			'background-position',
+			'background-size',
 			'color',
 			'box-shadow',
 			'transform',
-			'transition', 'animation'
+			'transition',
+			'animation'
 		], { unspecified: 'bottom' }],
 
 		// Color
 		'color-hex-case': 'lower',
 		'color-hex-length': 'short',
-		'color-named': ['never', { severity: 'warning' }],
+		'color-named': [ 'never', { severity: 'warning' }],
 		'color-no-hex': null,
 		'color-no-invalid-hex': true,
 
 		// Font family
-		'font-family-name-quotes': ['always-where-recommended', { severity: 'warning' }],
+		'font-family-name-quotes': [ 'always-where-recommended', { severity: 'warning' }],
 		'font-family-no-duplicate-names': true,
 		'font-family-no-missing-generic-family-keyword': true,
 
@@ -108,7 +155,7 @@ module.exports = {
 		'function-url-no-scheme-relative': null,
 		'function-url-scheme-whitelist': null,
 		'function-url-scheme-blacklist': null,
-		'function-url-quotes': ['always', { severity: 'warning' }],
+		'function-url-quotes': [ 'always', { severity: 'warning' }],
 		'function-whitelist': null,
 		'function-whitespace-after': 'always',
 
@@ -122,18 +169,18 @@ module.exports = {
 
 		// String
 		'string-no-newline': true,
-		'string-quotes': ['single', { severity: 'warning' }],
+		'string-quotes': [ 'single', { severity: 'warning' }],
 
 		// Length
-		'length-zero-no-unit': [true, { severity: 'warning' }],
+		'length-zero-no-unit': [ true, { severity: 'warning' }],
 
 		// Time
-		'time-min-milliseconds': [100, { severity: 'warning' }],
+		'time-min-milliseconds': [ 100, { severity: 'warning' }],
 
 		// Unit
 		'unit-blacklist': null,
 		'unit-case': 'lower',
-		'unit-no-unknown': [true, { severity: 'warning' }],
+		'unit-no-unknown': [ true, { severity: 'warning' }],
 		'unit-whitelist': null,
 
 		// Value
@@ -152,7 +199,7 @@ module.exports = {
 		'custom-property-pattern': null,
 
 		// Shorthand property
-		'shorthand-property-no-redundant-values': [true, { severity: 'warning' }],
+		'shorthand-property-no-redundant-values': [ true, { severity: 'warning' }],
 
 		// Property
 		'property-blacklist': null,
@@ -167,7 +214,7 @@ module.exports = {
 		// Declaration
 		'declaration-bang-space-after': 'never',
 		'declaration-bang-space-before': 'always',
-		'declaration-colon-newline-after': ['always-multi-line', { severity: 'warning' }],
+		'declaration-colon-newline-after': [ 'always-multi-line', { severity: 'warning' }],
 		'declaration-colon-space-after': 'always',
 		'declaration-colon-space-before': 'never',
 		'declaration-empty-line-before': null,
@@ -181,8 +228,8 @@ module.exports = {
 		'declaration-property-value-whitelist': null,
 
 		// Declaration block
-		'declaration-block-no-duplicate-properties': [true, { ignore: ['consecutive-duplicates'] }],
-		'declaration-block-no-redundant-longhand-properties': [true, { severity: 'warning' }],
+		'declaration-block-no-duplicate-properties': [ true, { ignore: ['consecutive-duplicates'] }],
+		'declaration-block-no-redundant-longhand-properties': [ true, { severity: 'warning' }],
 		'declaration-block-no-shorthand-property-overrides': true,
 		'declaration-block-semicolon-newline-after': null,
 		'declaration-block-semicolon-newline-before': null,
@@ -197,7 +244,7 @@ module.exports = {
 		'block-closing-brace-newline-before': 'always',
 		'block-closing-brace-space-after': null,
 		'block-closing-brace-space-before': 'always-single-line',
-		'block-no-empty': [true, { severity: 'warning' }],
+		'block-no-empty': [ true, { severity: 'warning' }],
 		'block-opening-brace-newline-after': 'always-multi-line',
 		'block-opening-brace-newline-before': null,
 		'block-opening-brace-space-after': 'always-single-line',
@@ -216,28 +263,28 @@ module.exports = {
 		'selector-descendant-combinator-no-non-space': true,
 		'selector-id-pattern': null,
 		'selector-max-compound-selectors': 4,
-		'selector-max-specificity': ['0,3,0', { severity: 'warning' }],
+		'selector-max-specificity': [ '0,3,0', { severity: 'warning' }],
 		'selector-nested-pattern': null,
 		'selector-no-qualifying-type': true,
 		'selector-no-vendor-prefix': true,
 		'selector-pseudo-class-blacklist': null,
 		'selector-pseudo-class-case': 'lower',
-		'selector-pseudo-class-no-unknown': [true, { severity: 'warning' }],
+		'selector-pseudo-class-no-unknown': [ true, { severity: 'warning' }],
 		'selector-pseudo-class-parentheses-space-inside': 'never',
 		'selector-pseudo-class-whitelist': null,
 		'selector-pseudo-element-case': 'lower',
 		'selector-pseudo-element-colon-notation': null,
-		'selector-pseudo-element-no-unknown': [true, { severity: 'warning' }],
+		'selector-pseudo-element-no-unknown': [ true, { severity: 'warning' }],
 		'selector-type-case': 'lower',
-		'selector-type-no-unknown': [true, { severity: 'warning' }],
+		'selector-type-no-unknown': [ true, { severity: 'warning' }],
 		'selector-max-empty-lines': 0,
-		'selector-combinator-blacklist': [['>', '~', '+'], { severity: 'warning' }],
+		'selector-combinator-blacklist': [[ '>', '~', '+' ], { severity: 'warning' }],
 		'selector-combinator-whitelist': null,
 		'selector-max-attribute': null,
-		'selector-max-class': [3, { severity: 'warning' }],
+		'selector-max-class': [ 3, { severity: 'warning' }],
 		'selector-max-combinators': 3,
 		'selector-max-id': 1,
-		'selector-max-pseudo-class': [3, { severity: 'warning' }],
+		'selector-max-pseudo-class': [ 3, { severity: 'warning' }],
 		'selector-max-type': 3,
 		'selector-max-universal': 1,
 		'selector-pseudo-element-blacklist': null,
@@ -250,14 +297,14 @@ module.exports = {
 		'selector-list-comma-space-before': 'never',
 
 		// Rule
-		'rule-empty-line-before': ['always', { severity: 'warning' }],
+		'rule-empty-line-before': [ 'always', { severity: 'warning' }],
 
 		// Media feature
 		'media-feature-colon-space-after': 'always',
 		'media-feature-colon-space-before': 'never',
 		'media-feature-name-blacklist': null,
 		'media-feature-name-case': 'lower',
-		'media-feature-name-no-unknown': [true, { severity: 'warning' }],
+		'media-feature-name-no-unknown': [ true, { severity: 'warning' }],
 		'media-feature-name-no-vendor-prefix': true,
 		'media-feature-name-whitelist': null,
 		'media-feature-parentheses-space-inside': 'never',
@@ -276,14 +323,14 @@ module.exports = {
 
 		// At-rule
 		'at-rule-blacklist': null,
-		'at-rule-empty-line-before': ['always', {
+		'at-rule-empty-line-before': [ 'always', {
 			except: ['blockless-after-blockless'],
-			ignore: ['blockless-after-blockless', 'after-comment', 'inside-block']
+			ignore: [ 'blockless-after-blockless', 'after-comment', 'inside-block' ]
 		}],
 		'at-rule-name-case': 'lower',
-		'at-rule-name-newline-after': ['always-multi-line', { severity: 'warning' }],
+		'at-rule-name-newline-after': [ 'always-multi-line', { severity: 'warning' }],
 		'at-rule-name-space-after': 'always-single-line',
-		'at-rule-no-unknown': [true, { severity: 'warning' }],
+		'at-rule-no-unknown': [ true, { severity: 'warning' }],
 		'at-rule-no-vendor-prefix': true,
 		'at-rule-semicolon-newline-after': 'always',
 		'at-rule-semicolon-space-before': 'never',
@@ -297,15 +344,15 @@ module.exports = {
 
 		// General / Sheet
 		'indentation': 'tab',
-		'max-empty-lines': [1, { severity: 'warning' }],
+		'max-empty-lines': [ 1, { severity: 'warning' }],
 		'max-line-length': null,
-		'max-nesting-depth': [4, {
+		'max-nesting-depth': [ 4, {
 			ignore: 'blockless-at-rules',
 			severity: 'warning'
 		}],
-		'no-descending-specificity': [true, { severity: 'warning' }],
-		'no-duplicate-selectors': [true, { severity: 'warning' }],
-		'no-empty-source': [true, { severity: 'warning' }],
+		'no-descending-specificity': [ true, { severity: 'warning' }],
+		'no-duplicate-selectors': [ true, { severity: 'warning' }],
+		'no-empty-source': [ true, { severity: 'warning' }],
 		'no-eol-whitespace': true,
 		'no-extra-semicolons': true,
 		'no-invalid-double-slash-comments': null,

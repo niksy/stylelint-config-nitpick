@@ -15,8 +15,8 @@
     "test": "test"
   },
   "scripts": {
-    "lint": "eslint *.js test/**/*.js",
-    "test": "eslint '{index,test/**/*}.js' && mocha 'test/**/*.js'"
+    "release": "np",
+    "test": "eslint '{index,scss,test/**/*}.js' && mocha 'test/**/*.js'"
   },
   "dependencies": {
     "stylelint-number-z-index-constraint": "^1.0.1",
@@ -26,17 +26,20 @@
     "stylelint-value-list-box-shadow-inset-first": "^1.0.1"
   },
   "devDependencies": {
-    "eslint": "^3.1.1",
-    "eslint-config-niksy": "^3.0.1",
+    "eslint": "^5.4.0",
+    "eslint-config-niksy": "^6.1.0",
     "eslint-plugin-extend": "^0.1.1",
-    "eslint-plugin-mocha": "^4.12.1",
-    "eslint-plugin-node": "^4.2.3",
-    "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-unicorn": "^2.1.2",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-mocha": "^5.1.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-unicorn": "^5.0.0",
     "lodash": "^4.0.0",
     "lodash.difference": "^4.3.0",
     "lodash.without": "^4.2.0",
-    "mocha": "^3.1.2",
+    "mocha": "^4.1.0",
+    "np": "^3.0.4",
+    "pify": "^4.0.0",
     "stylelint": "^9.2.1"
   },
   "engines": {

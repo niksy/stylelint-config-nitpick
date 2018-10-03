@@ -5,6 +5,7 @@ const path = require('path');
 const assert = require('assert');
 const isPlainObject = require('lodash/isPlainObject');
 const stylelint = require('stylelint');
+const pify = require('pify');
 
 /**
  * @param  {String} file
@@ -13,13 +14,14 @@ const stylelint = require('stylelint');
  * @return {Promise}
  */
 function runStylelint ( file, config ) {
-	return stylelint.lint({
-		code: fs.readFileSync(path.join(__dirname, file), 'utf8'),
-		config: config
-	})
-	.catch(( err ) => {
-		throw err;
-	});
+	return pify(fs.readFile)(path.join(__dirname, file), 'utf8')
+		.then(( code ) => stylelint.lint({
+			code,
+			config
+		}))
+		.catch(( err ) => {
+			throw err;
+		});
 }
 
 /**
@@ -32,11 +34,7 @@ function validateConfiguration ( configFile ) {
 		code: '',
 		config: require(configFile)
 	})
-	.then(( data ) => {
-		return [].concat(data.results[0].deprecations, data.results[0].invalidOptionWarnings);
-	}, () => {
-		return [];
-	});
+		.then(( data ) => [].concat(data.results[0].deprecations, data.results[0].invalidOptionWarnings), () => []);
 }
 
 /**
@@ -45,15 +43,14 @@ function validateConfiguration ( configFile ) {
  * @return {String[]}
  */
 function mapErrors ( errors ) {
-	return errors.map(( warning ) => {
-		return warning.rule;
-	});
+	return errors.map(( warning ) => warning.rule);
 }
 
 describe('Default config', function () {
 
 	it('should have config objects as plain objects', function () {
 		const config = require('../');
+
 		assert.ok(isPlainObject(config));
 		assert.ok(isPlainObject(config.rules));
 	});
@@ -91,6 +88,7 @@ describe('SCSS config', function () {
 
 	it('should have config objects as plain objects', function () {
 		const config = require('../scss');
+
 		assert.ok(isPlainObject(config));
 		assert.ok(isPlainObject(config.rules));
 	});

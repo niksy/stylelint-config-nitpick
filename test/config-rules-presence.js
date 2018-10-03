@@ -6,15 +6,14 @@ const without = require('lodash.without');
 
 describe('Default config rules presence', function () {
 
-	const defaultConfig = without([].concat(
-		Object.keys(require('stylelint').rules),
-		require('stylelint-selector-pseudo-class-lvhfa').ruleName,
-		require('stylelint-value-list-box-shadow-inset-first').ruleName,
-		require('stylelint-number-z-index-constraint').ruleName,
-		require('stylelint-order').map(( rule ) => {
-			return rule.ruleName;
-		})
-	),
+	const defaultConfig = without(
+		[].concat(
+			Object.keys(require('stylelint').rules),
+			require('stylelint-selector-pseudo-class-lvhfa').ruleName,
+			require('stylelint-value-list-box-shadow-inset-first').ruleName,
+			require('stylelint-number-z-index-constraint').ruleName,
+			require('stylelint-order').map(( rule ) => rule.ruleName)
+		),
 		'number-zero-length-no-unit',
 		'no-indistinguishable-colors',
 		'no-unsupported-browser-features',
@@ -54,17 +53,18 @@ describe('Default config rules presence', function () {
 
 describe('SCSS config rules presence', function () {
 
-	const scssConfig = without([].concat(
-		require('stylelint-scss').default.map(function ( rule ) {
-			return rule.ruleName;
-		}),
-		'at-rule-no-unknown',
-		'at-rule-blacklist',
-		'at-rule-empty-line-before',
-		'block-opening-brace-newline-after',
-		'block-closing-brace-newline-after',
-		'no-duplicate-selectors'
-	),
+	const scssConfig = without(
+		[].concat(
+			require('stylelint-scss').default.map(function ( rule ) {
+				return rule.ruleName;
+			}),
+			'at-rule-no-unknown',
+			'at-rule-blacklist',
+			'at-rule-empty-line-before',
+			'block-opening-brace-newline-after',
+			'block-closing-brace-newline-after',
+			'no-duplicate-selectors'
+		),
 		'scss/at-import-no-partial-extension',
 		'scss/at-mixin-no-argumentless-call-parentheses'
 	);
