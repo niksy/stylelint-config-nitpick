@@ -278,7 +278,7 @@ module.exports = {
 		'at-rule-blacklist': null,
 		'at-rule-empty-line-before': ['always', {
 			except: ['blockless-after-blockless'],
-			ignore: ['blockless-after-blockless', 'after-comment']
+			ignore: ['blockless-after-blockless', 'after-comment', 'inside-block']
 		}],
 		'at-rule-name-case': 'lower',
 		'at-rule-name-newline-after': ['always-multi-line', { severity: 'warning' }],
