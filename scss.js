@@ -81,6 +81,7 @@ module.exports = {
 
 		// General / Sheet
 		'scss/no-duplicate-dollar-variables': true,
+		'scss/no-dollar-variables': null,
 
 		// Other
 		'at-rule-empty-line-before': ['always', {

@@ -311,6 +311,8 @@ module.exports = {
 		'no-invalid-double-slash-comments': null,
 		'no-missing-end-of-source-newline': true,
 		'no-unknown-animations': null,
-		'no-duplicate-at-import-rules': true
+		'no-duplicate-at-import-rules': true,
+		'linebreaks': 'unix',
+		'no-empty-first-line': true
 	}
 };
