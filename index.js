@@ -137,7 +137,7 @@ module.exports = {
 		'unit-whitelist': null,
 
 		// Value
-		'value-no-vendor-prefix': [true, { severity: 'warning' }],
+		'value-no-vendor-prefix': true,
 
 		// Value list
 		'value-keyword-case': 'lower',
@@ -158,7 +158,7 @@ module.exports = {
 		'property-blacklist': null,
 		'property-case': 'lower',
 		'property-no-unknown': null,
-		'property-no-vendor-prefix': [true, { severity: 'warning' }],
+		'property-no-vendor-prefix': true,
 		'property-whitelist': null,
 
 		// Keyframe declaration
@@ -219,7 +219,7 @@ module.exports = {
 		'selector-max-specificity': ['0,3,0', { severity: 'warning' }],
 		'selector-nested-pattern': null,
 		'selector-no-qualifying-type': true,
-		'selector-no-vendor-prefix': [true, { severity: 'warning' }],
+		'selector-no-vendor-prefix': true,
 		'selector-pseudo-class-blacklist': null,
 		'selector-pseudo-class-case': 'lower',
 		'selector-pseudo-class-no-unknown': [true, { severity: 'warning' }],
@@ -284,7 +284,7 @@ module.exports = {
 		'at-rule-name-newline-after': ['always-multi-line', { severity: 'warning' }],
 		'at-rule-name-space-after': 'always-single-line',
 		'at-rule-no-unknown': [true, { severity: 'warning' }],
-		'at-rule-no-vendor-prefix': [true, { severity: 'warning' }],
+		'at-rule-no-vendor-prefix': true,
 		'at-rule-semicolon-newline-after': 'always',
 		'at-rule-semicolon-space-before': 'never',
 		'at-rule-whitelist': null,
