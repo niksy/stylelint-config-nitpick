@@ -48,7 +48,7 @@ module.exports = {
 		'scss/dollar-variable-colon-newline-after': null,
 		'scss/dollar-variable-colon-space-after': 'always',
 		'scss/dollar-variable-colon-space-before': 'never',
-		'scss/dollar-variable-empty-line-before': [ 'always', { except: [ 'first-nested', 'after-comment', 'after-dollar-variable' ] }],
+		'scss/dollar-variable-empty-line-before': null,
 		'scss/dollar-variable-no-missing-interpolation': true,
 		'scss/dollar-variable-pattern': [ /^[\da-z-_]+$/, { severity: 'warning' }],
 		'scss/dollar-variable-default': null,
@@ -86,7 +86,7 @@ module.exports = {
 		// Other
 		'at-rule-empty-line-before': [ 'always', {
 			except: ['blockless-after-blockless'],
-			ignore: [ 'blockless-after-blockless', 'after-comment' ],
+			ignore: [ 'blockless-after-blockless', 'after-comment', 'inside-block' ],
 			ignoreAtRules: [ 'if', 'else' ]
 		}],
 
