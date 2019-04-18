@@ -15,8 +15,10 @@
     "test": "test"
   },
   "scripts": {
+    "lint": "eslint '{index,scss,test/**/*}.js'",
     "release": "np",
-    "test": "eslint '{index,scss,test/**/*}.js' && mocha 'test/**/*.js'"
+    "test": "npm run lint && mocha 'test/**/*.js'",
+    "test:watch": "npm test -- --watch"
   },
   "dependencies": {
     "stylelint-number-z-index-constraint": "^2.0.0",
@@ -28,10 +30,12 @@
   "devDependencies": {
     "eslint": "^5.4.0",
     "eslint-config-niksy": "^6.1.0",
+    "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-extend": "^0.1.1",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-mocha": "^5.1.0",
     "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-unicorn": "^5.0.0",
     "lodash": "^4.0.0",
@@ -40,6 +44,7 @@
     "mocha": "^4.1.0",
     "np": "^3.0.4",
     "pify": "^4.0.0",
+    "prettier": "^1.17.0",
     "stylelint": "^10.0.1"
   },
   "engines": {
