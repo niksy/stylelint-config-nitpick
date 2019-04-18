@@ -78,6 +78,7 @@ module.exports = {
 
 		// Selector
 		'scss/selector-no-redundant-nesting-selector': [ true, { severity: 'warning' }],
+		'scss/selector-nest-combinators': null,
 
 		// General / Sheet
 		'scss/no-duplicate-dollar-variables': true,

@@ -158,6 +158,7 @@ module.exports = {
 		'function-url-quotes': [ 'always', { severity: 'warning' }],
 		'function-whitelist': null,
 		'function-whitespace-after': 'always',
+		'function-calc-no-invalid': true,
 
 		// Keyframes
 		'keyframes-name-pattern': null,
@@ -335,6 +336,7 @@ module.exports = {
 		'at-rule-semicolon-newline-after': 'always',
 		'at-rule-semicolon-space-before': 'never',
 		'at-rule-whitelist': null,
+		'at-rule-property-requirelist': null,
 
 		// Comment
 		'comment-empty-line-before': null,
