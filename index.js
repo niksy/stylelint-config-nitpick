@@ -54,10 +54,9 @@ module.exports = {
 					name: 'supports',
 					hasBlock: true
 				},
-				'at-variables',
-				'less-mixins'
+				'at-variables'
 			],
-			{ unspecified: 'bottom' }
+			{ unspecified: 'bottom', severity: 'warning' }
 		],
 		'order/properties-order': [
 			[
@@ -97,6 +96,7 @@ module.exports = {
 				'border-right',
 				'border-bottom',
 				'border-left',
+				'border-radius',
 				'border-top-left-radius',
 				'border-top-right-radius',
 				'border-bottom-right-radius',
@@ -129,7 +129,7 @@ module.exports = {
 				'transition',
 				'animation'
 			],
-			{ unspecified: 'bottom' }
+			{ unspecified: 'bottom', severity: 'warning' }
 		],
 
 		// Color
