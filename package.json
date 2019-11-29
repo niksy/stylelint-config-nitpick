@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "stylelint-number-z-index-constraint": "^2.0.0",
-    "stylelint-order": "^2.2.1",
+    "stylelint-order": "^3.1.1",
     "stylelint-scss": "^3.6.0",
     "stylelint-selector-pseudo-class-lvhfa": "^2.0.0",
     "stylelint-value-list-box-shadow-inset-first": "^2.0.1"
@@ -45,7 +45,7 @@
     "np": "^3.0.4",
     "pify": "^4.0.0",
     "prettier": "^1.17.0",
-    "stylelint": "^10.0.1"
+    "stylelint": "^12.0.0"
   },
   "engines": {
     "node": ">=8"
