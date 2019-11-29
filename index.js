@@ -403,6 +403,7 @@ module.exports = {
 		'no-unknown-animations': null,
 		'no-duplicate-at-import-rules': true,
 		linebreaks: 'unix',
-		'no-empty-first-line': true
+		'no-empty-first-line': true,
+		'unicode-bom': null
 	}
 };
