@@ -7,12 +7,14 @@
 ## Install
 
 ```sh
-npm install stylelint@10 stylelint-config-niksy --save-dev
+npm install stylelint@12 stylelint-config-niksy --save-dev
 ```
 
 ## Usage
 
 Add this config to your `.stylelintrc`:
+
+<!-- prettier-ignore-start -->
 
 ```json
 {
@@ -22,7 +24,12 @@ Add this config to your `.stylelintrc`:
 }
 ```
 
-If you’re using [presets](#presets), **it’s highly recommended to apply default preset:**
+<!-- prettier-ignore-end -->
+
+If you’re using [presets](#presets), **it’s highly recommended to apply default
+preset:**
+
+<!-- prettier-ignore-start -->
 
 ```json
 {
@@ -33,6 +40,8 @@ If you’re using [presets](#presets), **it’s highly recommended to apply defa
 }
 ```
 
+<!-- prettier-ignore-end -->
+
 ## Presets
 
 In addition to default preset, there are also specific presets. You can apply
@@ -42,6 +51,8 @@ multiple presets with [Stylelint `extends` option][eslint-extends].
 
 SCSS specific rules.
 
+<!-- prettier-ignore-start -->
+
 ```json
 {
 	"extends": [
@@ -49,6 +60,8 @@ SCSS specific rules.
 	]
 }
 ```
+
+<!-- prettier-ignore-end -->
 
 ## License
 
