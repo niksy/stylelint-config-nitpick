@@ -4,6 +4,7 @@
 	"useTabs": true,
 	"semi": true,
 	"singleQuote": true,
+	"quoteProps": "preserve",
 	"jsxSingleQuote": true,
 	"trailingComma": "none",
 	"bracketSpacing": true,
@@ -11,7 +12,7 @@
 	"arrowParens": "always",
 	"requirePragma": false,
 	"insertPragma": false,
-	"proseWrap": "preserve",
+	"proseWrap": "always",
 	"htmlWhitespaceSensitivity": "css",
 	"endOfLine": "lf"
 }
