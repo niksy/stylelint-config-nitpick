@@ -7,7 +7,7 @@
 ## Install
 
 ```sh
-npm install stylelint@12 stylelint-config-niksy --save-dev
+npm install stylelint@13 stylelint-config-niksy --save-dev
 ```
 
 ## Usage

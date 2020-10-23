@@ -1,20 +1,19 @@
 'use strict';
 
-const fs = require('fs');
+const { promises: fs } = require('fs');
 const path = require('path');
 const assert = require('assert');
 const isPlainObject = require('lodash/isPlainObject');
 const stylelint = require('stylelint');
-const pify = require('pify');
 
 /**
  * @param  {string} file
- * @param  {Object} config
+ * @param  {object} config
  *
  * @returns {Promise}
  */
 async function runStylelint(file, config) {
-	const code = await pify(fs.readFile)(path.join(__dirname, file), 'utf8');
+	const code = await fs.readFile(path.join(__dirname, file), 'utf8');
 	try {
 		return await stylelint.lint({
 			code,
@@ -46,7 +45,7 @@ async function validateConfiguration(configFile) {
 }
 
 /**
- * @param  {Object[]} errors
+ * @param  {object[]} errors
  *
  * @returns {Array<string>}
  */
@@ -54,28 +53,31 @@ function mapErrors(errors) {
 	return errors.map((warning) => warning.rule);
 }
 
-describe('Default config', function() {
-	it('should have config objects as plain objects', function() {
+describe('Default config', function () {
+	it('should have config objects as plain objects', function () {
 		const config = require('../');
 
 		assert.ok(isPlainObject(config));
 		assert.ok(isPlainObject(config.rules));
 	});
 
-	it('should not have invalid options or deprecation warnings', async function() {
+	it('should not have invalid options or deprecation warnings', async function () {
 		const errors = await validateConfiguration('../');
 		assert.equal(errors.length, 0);
 	});
 
-	it('should return proper validation errors for linted code', async function() {
+	it('should return proper validation errors for linted code', async function () {
 		try {
-			const data = await runStylelint('./fixtures/default.config.css', {
-				extends: require.resolve('../')
-			});
-			const errors = mapErrors(data.results[0].warnings);
+			const { results } = await runStylelint(
+				'./fixtures/default.config.css',
+				{
+					extends: require.resolve('../')
+				}
+			);
+			const errors = mapErrors(results[0].warnings);
 			assert.notEqual(errors.indexOf('number-leading-zero'), -1);
 			assert.notEqual(
-				errors.indexOf('declaration-property-value-blacklist'),
+				errors.indexOf('declaration-property-value-disallowed-list'),
 				-1
 			);
 			assert.notEqual(
@@ -95,44 +97,45 @@ describe('Default config', function() {
 				-1
 			);
 			assert.notEqual(errors.indexOf('order/properties-order'), -1);
-			return data;
 		} catch (error) {
 			assert.ifError(error);
 		}
 	});
 });
 
-describe('SCSS config', function() {
-	it('should have config objects as plain objects', function() {
+describe('SCSS config', function () {
+	it('should have config objects as plain objects', function () {
 		const config = require('../scss');
 
 		assert.ok(isPlainObject(config));
 		assert.ok(isPlainObject(config.rules));
 	});
 
-	it('should not have invalid options or deprecation warnings', async function() {
+	it('should not have invalid options or deprecation warnings', async function () {
 		const errors = await validateConfiguration('../scss');
 		assert.equal(errors.length, 0);
 	});
 
-	it('should return proper validation errors for linted code', async function() {
+	it('should return proper validation errors for linted code', async function () {
 		try {
-			const data = await runStylelint('./fixtures/scss.config.scss', {
-				extends: require.resolve('../scss')
-			});
-			const errors = mapErrors(data.results[0].warnings);
+			const { results } = await runStylelint(
+				'./fixtures/scss.config.scss',
+				{
+					extends: require.resolve('../scss')
+				}
+			);
+			const errors = mapErrors(results[0].warnings);
 			assert.notEqual(errors.indexOf('scss/at-function-pattern'), -1);
 			assert.notEqual(
 				errors.indexOf('scss/at-import-partial-extension-blacklist'),
 				-1
 			);
-			assert.notEqual(errors.indexOf('at-rule-blacklist'), -1);
+			assert.notEqual(errors.indexOf('at-rule-disallowed-list'), -1);
 			assert.equal(errors.indexOf('at-rule-no-unknown'), -1);
 			assert.equal(
 				errors.indexOf('block-closing-brace-newline-after'),
 				-1
 			);
-			return data;
 		} catch (error) {
 			assert.ifError(error);
 		}

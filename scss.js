@@ -20,7 +20,7 @@ module.exports = {
 		'scss/at-extend-no-missing-placeholder': true,
 
 		// @function
-		'scss/at-function-pattern': [/^[\da-z-_]+$/, { severity: 'warning' }],
+		'scss/at-function-pattern': [/^[\d_a-z-]+$/, { severity: 'warning' }],
 		'scss/at-function-named-arguments': [
 			'always',
 			{ ignore: ['single-argument'], severity: 'warning' }
@@ -49,7 +49,7 @@ module.exports = {
 			'always',
 			{ severity: 'warning' }
 		],
-		'scss/at-mixin-pattern': [/^[\da-z-_]+$/, { severity: 'warning' }],
+		'scss/at-mixin-pattern': [/^[\d_a-z-]+$/, { severity: 'warning' }],
 		'scss/at-mixin-named-arguments': [
 			'always',
 			{ ignore: ['single-argument'], severity: 'warning' }
@@ -62,7 +62,7 @@ module.exports = {
 		'scss/at-rule-conditional-no-parentheses': null,
 
 		// @debug
-		'at-rule-blacklist': [['debug'], { severity: 'warning' }],
+		'at-rule-disallowed-list': [['debug'], { severity: 'warning' }],
 
 		// $variable
 		'scss/dollar-variable-colon-newline-after': null,
@@ -71,15 +71,23 @@ module.exports = {
 		'scss/dollar-variable-empty-line-before': null,
 		'scss/dollar-variable-no-missing-interpolation': true,
 		'scss/dollar-variable-pattern': [
-			/^[\da-z-_]+$/,
+			/^[\d_a-z-]+$/,
 			{ severity: 'warning' }
 		],
 		'scss/dollar-variable-default': null,
 
 		// %placeholder
 		'scss/percent-placeholder-pattern': [
-			/^[\da-z-_]+$/,
+			/^[\d_a-z-]+$/,
 			{ severity: 'warning' }
+		],
+		'scss/dollar-variable-empty-line-after': [
+			'always',
+			{ except: ['before-dollar-variable'] }
+		],
+		'scss/dollar-variable-first-in-block': [
+			true,
+			{ ignore: ['comments', 'imports'] }
 		],
 
 		// //comment
@@ -89,6 +97,7 @@ module.exports = {
 
 		// Comment
 		'scss/comment-no-loud': null,
+		'scss/comment-no-empty': null,
 
 		// Dimension
 		'scss/dimension-no-non-numeric-values': true,
@@ -128,6 +137,9 @@ module.exports = {
 		'scss/no-duplicate-mixins': true,
 		'scss/no-duplicate-dollar-variables': true,
 		'scss/no-dollar-variables': null,
+
+		// -- Allow when using Sass modules
+		'scss/no-global-function-names': null,
 
 		// Other
 		'at-rule-empty-line-before': [

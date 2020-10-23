@@ -4,7 +4,7 @@ const assert = require('assert');
 const difference = require('lodash.difference');
 const without = require('lodash.without');
 
-describe('Default config rules presence', function() {
+describe('Default config rules presence', function () {
 	const defaultConfig = without(
 		[].concat(
 			Object.keys(require('stylelint').rules),
@@ -34,11 +34,38 @@ describe('Default config rules presence', function() {
 		'order/declaration-block-properties-order',
 		'order/declaration-block-properties-alphabetical-order',
 		'order/declaration-block-properties-specified-order',
-		'order/declaration-block-property-groups-structure'
+		'order/declaration-block-property-groups-structure',
+		'at-rule-whitelist',
+		'at-rule-blacklist',
+		'at-rule-property-requirelist',
+		'declaration-property-unit-blacklist',
+		'declaration-property-unit-whitelist',
+		'declaration-property-value-blacklist',
+		'declaration-property-value-whitelist',
+		'comment-word-blacklist',
+		'function-blacklist',
+		'function-url-scheme-blacklist',
+		'function-url-scheme-whitelist',
+		'function-whitelist',
+		'media-feature-name-blacklist',
+		'media-feature-name-value-whitelist',
+		'media-feature-name-whitelist',
+		'property-blacklist',
+		'property-whitelist',
+		'selector-attribute-operator-blacklist',
+		'selector-attribute-operator-whitelist',
+		'selector-combinator-blacklist',
+		'selector-combinator-whitelist',
+		'selector-pseudo-class-blacklist',
+		'selector-pseudo-class-whitelist',
+		'selector-pseudo-element-blacklist',
+		'selector-pseudo-element-whitelist',
+		'unit-blacklist',
+		'unit-whitelist'
 	);
 	const customConfig = Object.keys(require('../').rules);
 
-	it('should have all default config rules present in custom config', function() {
+	it('should have all default config rules present in custom config', function () {
 		const list = difference(defaultConfig, customConfig);
 		assert.equal(
 			list.length,
@@ -49,7 +76,7 @@ describe('Default config rules presence', function() {
 		);
 	});
 
-	it('should have all custom config rules present in default config', function() {
+	it('should have all custom config rules present in default config', function () {
 		const list = difference(customConfig, defaultConfig);
 		assert.equal(
 			list.length,
@@ -61,14 +88,14 @@ describe('Default config rules presence', function() {
 	});
 });
 
-describe('SCSS config rules presence', function() {
+describe('SCSS config rules presence', function () {
 	const scssConfig = without(
 		[].concat(
-			require('stylelint-scss').default.map(function(rule) {
+			require('stylelint-scss').default.map(function (rule) {
 				return rule.ruleName;
 			}),
 			'at-rule-no-unknown',
-			'at-rule-blacklist',
+			'at-rule-disallowed-list',
 			'at-rule-empty-line-before',
 			'block-opening-brace-newline-after',
 			'block-closing-brace-newline-after',
@@ -79,7 +106,7 @@ describe('SCSS config rules presence', function() {
 	);
 	const customScssConfig = Object.keys(require('../scss').rules);
 
-	it('should have all default config rules present in custom config', function() {
+	it('should have all default config rules present in custom config', function () {
 		const list = difference(scssConfig, customScssConfig);
 		assert.equal(
 			list.length,
@@ -90,7 +117,7 @@ describe('SCSS config rules presence', function() {
 		);
 	});
 
-	it('should have all custom config rules present in default config', function() {
+	it('should have all custom config rules present in default config', function () {
 		const list = difference(customScssConfig, scssConfig);
 		assert.equal(
 			list.length,
