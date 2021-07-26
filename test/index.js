@@ -7,8 +7,8 @@ const isPlainObject = require('lodash/isPlainObject');
 const stylelint = require('stylelint');
 
 /**
- * @param  {string} file
- * @param  {object} config
+ * @param {string} file
+ * @param {object} config
  *
  * @returns {Promise}
  */
@@ -25,7 +25,7 @@ async function runStylelint(file, config) {
 }
 
 /**
- * @param  {string} configFile
+ * @param {string} configFile
  *
  * @returns {Promise<Array>}
  */
@@ -45,7 +45,7 @@ async function validateConfiguration(configFile) {
 }
 
 /**
- * @param  {object[]} errors
+ * @param {object[]} errors
  *
  * @returns {Array<string>}
  */
