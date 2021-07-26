@@ -1,12 +1,7 @@
 {
 	"root": true,
-	"extends": [
-		"niksy",
-		"prettier"
-	],
-	"plugins": [
-		"prettier"
-	],
+	"extends": ["eslint-config-niksy", "eslint-config-prettier"],
+	"plugins": ["eslint-plugin-prettier"],
 	"rules": {
 		"prettier/prettier": 1
 	}
