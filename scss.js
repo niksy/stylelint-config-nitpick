@@ -20,7 +20,7 @@ module.exports = {
 		'scss/at-extend-no-missing-placeholder': true,
 
 		// @function
-		'scss/at-function-pattern': [/^[\d_a-z-]+$/, { severity: 'warning' }],
+		'scss/at-function-pattern': [/^[\d_a-z-]+$/],
 		'scss/at-function-named-arguments': [
 			'always',
 			{ ignore: ['single-argument'], severity: 'warning' }
@@ -49,7 +49,7 @@ module.exports = {
 			'always',
 			{ severity: 'warning' }
 		],
-		'scss/at-mixin-pattern': [/^[\d_a-z-]+$/, { severity: 'warning' }],
+		'scss/at-mixin-pattern': [/^[\d_a-z-]+$/],
 		'scss/at-mixin-named-arguments': [
 			'always',
 			{ ignore: ['single-argument'], severity: 'warning' }
@@ -70,17 +70,11 @@ module.exports = {
 		'scss/dollar-variable-colon-space-before': 'never',
 		'scss/dollar-variable-empty-line-before': null,
 		'scss/dollar-variable-no-missing-interpolation': true,
-		'scss/dollar-variable-pattern': [
-			/^[\d_a-z-]+$/,
-			{ severity: 'warning' }
-		],
+		'scss/dollar-variable-pattern': [/^[\d_a-z-]+$/],
 		'scss/dollar-variable-default': null,
 
 		// %placeholder
-		'scss/percent-placeholder-pattern': [
-			/^[\d_a-z-]+$/,
-			{ severity: 'warning' }
-		],
+		'scss/percent-placeholder-pattern': [/^[\d_a-z-]+$/],
 		'scss/dollar-variable-empty-line-after': [
 			'always',
 			{ except: ['before-dollar-variable'] }
