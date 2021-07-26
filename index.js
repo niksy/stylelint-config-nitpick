@@ -263,6 +263,7 @@ module.exports = {
 		'declaration-block-semicolon-space-before': 'never',
 		'declaration-block-single-line-max-declarations': null,
 		'declaration-block-trailing-semicolon': 'always',
+		'declaration-block-no-duplicate-custom-properties': true,
 
 		// Block
 		'block-closing-brace-empty-line-before': 'never',
@@ -318,6 +319,8 @@ module.exports = {
 		'selector-max-universal': 1,
 		'selector-pseudo-element-disallowed-list': null,
 		'selector-pseudo-element-allowed-list': null,
+		'selector-attribute-name-disallowed-list': null,
+		'selector-disallowed-list': null,
 
 		// Selector list
 		'selector-list-comma-newline-after': 'always-multi-line',
@@ -381,6 +384,7 @@ module.exports = {
 		'comment-no-empty': null,
 		'comment-whitespace-inside': 'always',
 		'comment-word-disallowed-list': null,
+		'comment-pattern': null,
 
 		// General / Sheet
 		indentation: 'tab',
@@ -405,10 +409,15 @@ module.exports = {
 		linebreaks: 'unix',
 		'no-empty-first-line': true,
 		'unicode-bom': null,
+		'no-invalid-position-at-import-rule': true,
+		'no-irregular-whitespace': true,
 
 		// Limit language features
 		'alpha-value-notation': ['number'],
 		'color-function-notation': ['legacy'],
-		'hue-degree-notation': null
+		'hue-degree-notation': null,
+
+		// Named grid areas
+		'named-grid-areas-no-invalid': true
 	}
 };
