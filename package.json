@@ -11,15 +11,19 @@
   "files": [
     "index.js",
     "scss.js",
+    "CHANGELOG.md",
     "LICENSE.md",
     "README.md"
   ],
   "scripts": {
     "lint": "eslint '{index,scss,test/**/*}.js'",
+    "postpublish": "GITHUB_TOKEN=$GITHUB_RELEASE_TOKEN github-release-from-changelog",
     "prerelease": "npm run lint",
     "release": "np --no-release-draft",
-    "test": "stylelint-find-new-rules test/fixtures/all-rules.js && mocha 'test/*.js'",
-    "test:watch": "npm test -- --watch"
+    "pretest": "stylelint-find-new-rules test/fixtures/all-rules.js",
+    "test": "mocha 'test/**/*.js'",
+    "test:watch": "npm test -- --watch",
+    "version": "if [ $(git rev-parse --abbrev-ref HEAD) == 'master' ]; then version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md; else echo; fi"
   },
   "dependencies": {
     "postcss-scss": "^4.0.2",
@@ -30,6 +34,7 @@
     "stylelint-value-list-box-shadow-inset-first": "^3.0.0"
   },
   "devDependencies": {
+    "changelog-verify": "^1.1.2",
     "eslint": "^7.31.0",
     "eslint-config-niksy": "^10.0.0",
     "eslint-config-prettier": "^8.3.0",
@@ -40,6 +45,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-unicorn": "^31.0.0",
+    "github-release-from-changelog": "^2.1.1",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.2",
     "lodash": "^4.0.0",
@@ -49,7 +55,8 @@
     "np": "^6.5.0",
     "prettier": "^2.4.0",
     "stylelint": "^14.0.1",
-    "stylelint-find-new-rules": "^3.0.4"
+    "stylelint-find-new-rules": "^3.0.4",
+    "version-changelog": "^3.1.1"
   },
   "peerDependencies": {
     "stylelint": "^14.0.0"
