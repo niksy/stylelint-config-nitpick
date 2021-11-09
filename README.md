@@ -1,4 +1,4 @@
-# stylelint-config-niksy
+# stylelint-config-nitpick
 
 [![Build Status][ci-img]][ci]
 
@@ -7,7 +7,7 @@
 ## Install
 
 ```sh
-npm install stylelint stylelint-config-niksy --save-dev
+npm install stylelint stylelint-config-nitpick --save-dev
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ Add this config to your `.stylelintrc`:
 ```json
 {
 	"extends": [
-		"stylelint-config-niksy"
+		"stylelint-config-nitpick"
 	]
 }
 ```
@@ -34,8 +34,8 @@ preset:**
 ```json
 {
 	"extends": [
-		"stylelint-config-niksy",
-		"stylelint-config-niksy/other-preset"
+		"stylelint-config-nitpick",
+		"stylelint-config-nitpick/other-preset"
 	]
 }
 ```
@@ -56,7 +56,7 @@ SCSS specific rules.
 ```json
 {
 	"extends": [
-		"stylelint-config-niksy/scss"
+		"stylelint-config-nitpick/scss"
 	]
 }
 ```
@@ -69,8 +69,8 @@ MIT © [Ivan Nikolić](http://ivannikolic.com)
 
 <!-- prettier-ignore-start -->
 
-[ci]: https://github.com/niksy/stylelint-config-niksy/actions?query=workflow%3ACI
-[ci-img]: https://github.com/niksy/stylelint-config-niksy/workflows/CI/badge.svg?branch=master
+[ci]: https://github.com/niksy/stylelint-config-nitpick/actions?query=workflow%3ACI
+[ci-img]: https://github.com/niksy/stylelint-config-nitpick/workflows/CI/badge.svg?branch=master
 [stylelint]: http://stylelint.io/
 [stylelint-extends]: https://stylelint.io/user-guide/configuration/#extends
 

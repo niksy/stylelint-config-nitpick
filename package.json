@@ -1,5 +1,5 @@
 {
-  "name": "stylelint-config-niksy",
+  "name": "stylelint-config-nitpick",
   "version": "8.1.0",
   "description": "Stylelint config for my projects.",
   "license": "MIT",
@@ -58,16 +58,16 @@
     "node": ">=12"
   },
   "keywords": [
-    "niksy",
+    "nitpick",
     "stylelint",
     "stylelintconfig"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/niksy/stylelint-config-niksy.git"
+    "url": "git+https://github.com/niksy/stylelint-config-nitpick.git"
   },
   "bugs": {
-    "url": "https://github.com/niksy/stylelint-config-niksy/issues"
+    "url": "https://github.com/niksy/stylelint-config-nitpick/issues"
   },
-  "homepage": "https://github.com/niksy/stylelint-config-niksy#readme"
+  "homepage": "https://github.com/niksy/stylelint-config-nitpick#readme"
 }
