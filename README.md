@@ -45,7 +45,7 @@ preset:**
 ## Presets
 
 In addition to default preset, there are also specific presets. You can apply
-multiple presets with [Stylelint `extends` option][eslint-extends].
+multiple presets with [Stylelint `extends` option][stylelint-extends].
 
 ### SCSS
 
