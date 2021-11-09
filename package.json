@@ -22,11 +22,11 @@
     "test:watch": "npm test -- --watch"
   },
   "dependencies": {
-    "stylelint-number-z-index-constraint": "^2.0.0",
-    "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.20.1",
-    "stylelint-selector-pseudo-class-lvhfa": "^2.0.0",
-    "stylelint-value-list-box-shadow-inset-first": "^2.0.1"
+    "stylelint-number-z-index-constraint": "^3.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.0.0",
+    "stylelint-selector-pseudo-class-lvhfa": "^3.0.0",
+    "stylelint-value-list-box-shadow-inset-first": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^7.31.0",
@@ -47,7 +47,10 @@
     "mocha": "^8.2.0",
     "np": "^6.5.0",
     "prettier": "^2.4.0",
-    "stylelint": "^13.13.1"
+    "stylelint": "^14.0.1"
+  },
+  "peerDependencies": {
+    "stylelint": "^14.0.0"
   },
   "engines": {
     "node": ">=12"
