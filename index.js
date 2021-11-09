@@ -131,13 +131,18 @@ module.exports = {
 			],
 			{ unspecified: 'bottom', severity: 'warning' }
 		],
+		'order/properties-alphabetical-order': null,
 
 		// Color
+		'color-hex-alpha': null,
 		'color-hex-case': 'lower',
 		'color-hex-length': 'short',
 		'color-named': ['never', { severity: 'warning' }],
 		'color-no-hex': null,
 		'color-no-invalid-hex': true,
+
+		// Custom property
+		'custom-property-no-missing-var-function': true,
 
 		// Font family
 		'font-family-name-quotes': [
@@ -168,7 +173,6 @@ module.exports = {
 		'function-url-quotes': ['always', { severity: 'warning' }],
 		'function-allowed-list': null,
 		'function-whitespace-after': 'always',
-		'function-calc-no-invalid': true,
 
 		// Keyframes
 		'keyframes-name-pattern': null,
