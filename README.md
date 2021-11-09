@@ -69,8 +69,8 @@ MIT © [Ivan Nikolić](http://ivannikolic.com)
 
 <!-- prettier-ignore-start -->
 
-[ci]: https://travis-ci.com/niksy/stylelint-config-niksy
-[ci-img]: https://travis-ci.com/niksy/stylelint-config-niksy.svg?branch=master
+[ci]: https://github.com/niksy/stylelint-config-niksy/actions?query=workflow%3ACI
+[ci-img]: https://github.com/niksy/stylelint-config-niksy/workflows/CI/badge.svg?branch=master
 [stylelint]: http://stylelint.io/
 [stylelint-extends]: https://stylelint.io/user-guide/configuration/#extends
 

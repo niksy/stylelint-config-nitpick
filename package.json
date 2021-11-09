@@ -16,8 +16,9 @@
   ],
   "scripts": {
     "lint": "eslint '{index,scss,test/**/*}.js'",
+    "prerelease": "npm run lint",
     "release": "np --no-release-draft",
-    "test": "npm run lint && mocha 'test/**/*.js'",
+    "test": "mocha 'test/**/*.js'",
     "test:watch": "npm test -- --watch"
   },
   "dependencies": {
@@ -45,11 +46,11 @@
     "lodash.without": "^4.2.0",
     "mocha": "^8.2.0",
     "np": "^6.5.0",
-    "prettier": "^2.1.2",
+    "prettier": "^2.4.0",
     "stylelint": "^13.13.1"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "keywords": [
     "niksy",
