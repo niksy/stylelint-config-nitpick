@@ -2,6 +2,7 @@
 
 module.exports = {
 	plugins: ['stylelint-scss'],
+	customSyntax: 'postcss-scss',
 
 	rules: {
 		// @each
