@@ -2,6 +2,10 @@
 
 ## [Unreleased][]
 
+### Changed
+
+-   Set Node version to minimum 12.22
+
 ## [9.0.0][] - 2021-11-09
 
 ### Changed
