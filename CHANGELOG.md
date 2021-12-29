@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [9.1.1][] - 2021-12-29
+
 ### Added
 
 -   New rules
@@ -24,10 +26,14 @@
 
 -   Module for finding unused/deprecated rules
 
-        https://github.com/niksy/stylelint-config-niksy/compare/v9.0.0...HEAD
+            https://github.com/niksy/stylelint-config-niksy/compare/v9.0.0...HEAD
 
-    [9.0.0]: https://github.com/niksy/stylelint-config-niksy/tree/v9.0.0
+        [9.0.0]: https://github.com/niksy/stylelint-config-niksy/tree/v9.0.0
+
+        https://github.com/niksy/stylelint-config-nitpick/compare/v9.1.0...HEAD
+
+    [9.1.0]: https://github.com/niksy/stylelint-config-nitpick/tree/v9.1.0
 
 [unreleased]:
-	https://github.com/niksy/stylelint-config-nitpick/compare/v9.1.0...HEAD
-[9.1.0]: https://github.com/niksy/stylelint-config-nitpick/tree/v9.1.0
+	https://github.com/niksy/stylelint-config-nitpick/compare/v9.1.1...HEAD
+[9.1.1]: https://github.com/niksy/stylelint-config-nitpick/tree/v9.1.1
