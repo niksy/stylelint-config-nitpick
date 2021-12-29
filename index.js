@@ -422,6 +422,9 @@ module.exports = {
 		'hue-degree-notation': null,
 
 		// Named grid areas
-		'named-grid-areas-no-invalid': true
+		'named-grid-areas-no-invalid': true,
+
+		// Rules
+		'rule-selector-property-disallowed-list': null
 	}
 };

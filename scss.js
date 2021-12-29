@@ -62,6 +62,9 @@ module.exports = {
 		'scss/at-rule-no-unknown': [true, { severity: 'warning' }],
 		'scss/at-rule-conditional-no-parentheses': null,
 
+		// @use
+		'scss/at-use-no-unnamespaced': null,
+
 		// @debug
 		'at-rule-disallowed-list': [['debug'], { severity: 'warning' }],
 
@@ -73,6 +76,7 @@ module.exports = {
 		'scss/dollar-variable-no-missing-interpolation': true,
 		'scss/dollar-variable-pattern': [/^[\d_a-z-]+$/],
 		'scss/dollar-variable-default': null,
+		'scss/dollar-variable-no-namespaced-assignment': true,
 
 		// %placeholder
 		'scss/percent-placeholder-pattern': [/^[\d_a-z-]+$/],

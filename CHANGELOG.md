@@ -2,6 +2,10 @@
 
 ## [Unreleased][]
 
+### Added
+
+-   New rules
+
 ## [9.1.0][] - 2021-12-29
 
 ### Changed
