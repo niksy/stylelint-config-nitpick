@@ -2,6 +2,10 @@
 
 ## [Unreleased][]
 
+### Changed
+
+- Update rules
+
 ## [10.0.1][] - 2022-11-16
 
 ### Changed
@@ -40,22 +44,10 @@
 
 -   Module for finding unused/deprecated rules
 
-                    https://github.com/niksy/stylelint-config-niksy/compare/v9.0.0...HEAD
-
-                [9.0.0]: https://github.com/niksy/stylelint-config-niksy/tree/v9.0.0
-
-                https://github.com/niksy/stylelint-config-nitpick/compare/v9.1.0...HEAD
-
-            [9.1.0]: https://github.com/niksy/stylelint-config-nitpick/tree/v9.1.0
-
-            https://github.com/niksy/stylelint-config-nitpick/compare/v9.1.1...HEAD
-
-        [9.1.1]: https://github.com/niksy/stylelint-config-nitpick/tree/v9.1.1
-
-        https://github.com/niksy/stylelint-config-nitpick/compare/v10.0.0...HEAD
-
-    [10.0.0]: https://github.com/niksy/stylelint-config-nitpick/tree/v10.0.0
-
+[9.0.0]: https://github.com/niksy/stylelint-config-niksy/tree/v9.0.0
+[9.1.0]: https://github.com/niksy/stylelint-config-nitpick/tree/v9.1.0
+[9.1.1]: https://github.com/niksy/stylelint-config-nitpick/tree/v9.1.1
+[10.0.0]: https://github.com/niksy/stylelint-config-nitpick/tree/v10.0.0
 [unreleased]:
 	https://github.com/niksy/stylelint-config-nitpick/compare/v10.0.1...HEAD
 [10.0.1]: https://github.com/niksy/stylelint-config-nitpick/tree/v10.0.1
