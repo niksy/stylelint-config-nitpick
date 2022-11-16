@@ -27,6 +27,8 @@ module.exports = {
 			{ ignore: ['single-argument'], severity: 'warning' }
 		],
 		'scss/at-function-parentheses-space-before': 'always',
+		'function-no-unknown': null,
+		'scss/function-no-unknown': [true, { severity: 'warning' }],
 
 		// @if
 		'scss/at-if-closing-brace-newline-after': 'always-last-in-chain',
@@ -154,12 +156,6 @@ module.exports = {
 			}
 		],
 
-		'block-opening-brace-newline-after': [
-			'always-multi-line',
-			{
-				ignoreAtRules: ['if', 'else']
-			}
-		],
 		'block-closing-brace-newline-after': [
 			'always',
 			{

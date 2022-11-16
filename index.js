@@ -173,6 +173,7 @@ module.exports = {
 		'function-url-quotes': ['always', { severity: 'warning' }],
 		'function-allowed-list': null,
 		'function-whitespace-after': 'always',
+		'function-no-unknown': [true, { severity: 'warning' }],
 
 		// Keyframes
 		'keyframes-name-pattern': null,
@@ -250,6 +251,7 @@ module.exports = {
 			{ severity: 'warning' }
 		],
 		'declaration-property-value-allowed-list': null,
+		'declaration-property-max-values': null,
 
 		// Declaration block
 		'declaration-block-no-duplicate-properties': [
@@ -425,6 +427,17 @@ module.exports = {
 		'named-grid-areas-no-invalid': true,
 
 		// Rules
-		'rule-selector-property-disallowed-list': null
+		'rule-selector-property-disallowed-list': null,
+
+		// Unknown
+		'annotation-no-unknown': true,
+
+		// Notation
+		'import-notation': null,
+		'keyframe-selector-notation': ['percentage', { severity: 'warning' }],
+		'selector-not-notation': ['complex', { severity: 'warning' }],
+
+		// Duplicate
+		'keyframe-block-no-duplicate-selectors': true
 	}
 };
