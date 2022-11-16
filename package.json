@@ -26,10 +26,10 @@
     "version": "if [ $(git rev-parse --abbrev-ref HEAD) == 'master' ]; then sed -i '' '/\\[unreleased\\]:/d' CHANGELOG.md && version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md; else echo; fi"
   },
   "dependencies": {
-    "postcss-scss": "^4.0.2",
+    "postcss-scss": "^4.0.5",
     "stylelint-number-z-index-constraint": "^3.0.0",
     "stylelint-order": "^5.0.0",
-    "stylelint-scss": "^4.0.0",
+    "stylelint-scss": "^4.3.0",
     "stylelint-selector-pseudo-class-lvhfa": "^3.0.0",
     "stylelint-value-list-box-shadow-inset-first": "^3.0.0"
   },

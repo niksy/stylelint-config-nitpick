@@ -2,6 +2,10 @@
 
 ## [Unreleased][]
 
+### Changed
+
+-   Force minor version for packages
+
 ## [10.0.0][] - 2022-11-16
 
 ### Changed
