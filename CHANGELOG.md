@@ -2,6 +2,12 @@
 
 ## [Unreleased][]
 
+### Changed
+
+-   Set Node version to minimum 16
+-   Update rules
+-   Upgrade dependencies
+
 ## [9.1.1][] - 2021-12-29
 
 ### Added
