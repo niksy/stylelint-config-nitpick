@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [10.0.0][] - 2022-11-16
+
 ### Changed
 
 -   Set Node version to minimum 16
@@ -32,14 +34,18 @@
 
 -   Module for finding unused/deprecated rules
 
-            https://github.com/niksy/stylelint-config-niksy/compare/v9.0.0...HEAD
+                https://github.com/niksy/stylelint-config-niksy/compare/v9.0.0...HEAD
 
-        [9.0.0]: https://github.com/niksy/stylelint-config-niksy/tree/v9.0.0
+            [9.0.0]: https://github.com/niksy/stylelint-config-niksy/tree/v9.0.0
 
-        https://github.com/niksy/stylelint-config-nitpick/compare/v9.1.0...HEAD
+            https://github.com/niksy/stylelint-config-nitpick/compare/v9.1.0...HEAD
 
-    [9.1.0]: https://github.com/niksy/stylelint-config-nitpick/tree/v9.1.0
+        [9.1.0]: https://github.com/niksy/stylelint-config-nitpick/tree/v9.1.0
+
+        https://github.com/niksy/stylelint-config-nitpick/compare/v9.1.1...HEAD
+
+    [9.1.1]: https://github.com/niksy/stylelint-config-nitpick/tree/v9.1.1
 
 [unreleased]:
-	https://github.com/niksy/stylelint-config-nitpick/compare/v9.1.1...HEAD
-[9.1.1]: https://github.com/niksy/stylelint-config-nitpick/tree/v9.1.1
+	https://github.com/niksy/stylelint-config-nitpick/compare/v10.0.0...HEAD
+[10.0.0]: https://github.com/niksy/stylelint-config-nitpick/tree/v10.0.0
