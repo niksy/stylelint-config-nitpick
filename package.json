@@ -62,7 +62,7 @@
     "stylelint": "^14.0.0"
   },
   "engines": {
-    "node": ">=12.22"
+    "node": ">=16"
   },
   "keywords": [
     "nitpick",
