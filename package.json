@@ -5,6 +5,7 @@
   "license": "MIT",
   "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com)",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "test": "test"
   },
@@ -20,7 +21,7 @@
     "postpublish": "GITHUB_TOKEN=$GITHUB_RELEASE_TOKEN github-release-from-changelog",
     "prerelease": "npm run lint",
     "release": "np --no-release-draft",
-    "pretest": "stylelint-find-new-rules test/fixtures/all-rules.cjs",
+    "pretest": "stylelint-find-new-rules test/fixtures/all-rules.js",
     "test": "mocha 'test/**/*.js'",
     "test:watch": "npm test -- --watch",
     "version": "if [ $(git rev-parse --abbrev-ref HEAD) == 'master' ]; then sed -i '' '/\\[unreleased\\]:/d' CHANGELOG.md && version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md; else echo; fi"

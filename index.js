@@ -1,8 +1,4 @@
-/* eslint-disable multiline-comment-style */
-
-'use strict';
-
-module.exports = {
+export default {
 	plugins: [
 		'stylelint-selector-pseudo-class-lvhfa',
 		'stylelint-value-list-box-shadow-inset-first',

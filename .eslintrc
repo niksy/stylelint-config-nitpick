@@ -2,12 +2,7 @@
 	"root": true,
 	"extends": ["eslint-config-nitpick", "eslint-config-prettier"],
 	"plugins": ["eslint-plugin-prettier"],
-	"parserOptions": {
-		"sourceType": "commonjs"
-	},
 	"rules": {
-		"prettier/prettier": 1,
-		"import/no-commonjs": 0,
-		"unicorn/prefer-module": 0
+		"prettier/prettier": 1
 	}
 }

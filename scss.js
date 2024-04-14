@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = {
+export default {
 	plugins: ['stylelint-scss'],
 	customSyntax: 'postcss-scss',
 	rules: {
