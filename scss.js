@@ -27,7 +27,6 @@ module.exports = {
 			{ severity: 'warning' }
 		],
 		'scss/at-if-no-null': null,
-		'scss/at-import-no-partial-leading-underscore': true,
 		'scss/at-import-partial-extension-blacklist': [
 			['scss', 'sass'],
 			{ severity: 'warning' }
@@ -105,12 +104,6 @@ module.exports = {
 				ignoreAtRules: ['if', 'else']
 			}
 		],
-		'block-closing-brace-newline-after': [
-			'always',
-			{
-				ignoreAtRules: ['if', 'else']
-			}
-		],
 		'no-duplicate-selectors': null,
 		'annotation-no-unknown': [
 			true,
@@ -125,5 +118,15 @@ module.exports = {
 		'scss/function-disallowed-list': null,
 		'scss/load-no-partial-leading-underscore': true,
 		'scss/property-no-unknown': null
+
+		// eslint-disable-next-line multiline-comment-style
+		// Stylistic rules
+		// 'block-closing-brace-newline-after': [
+		// 	'always',
+		// 	{
+		// 		ignoreAtRules: ['if', 'else']
+		// 	}
+		// ],
+		// 'scss/at-import-no-partial-leading-underscore': true,
 	}
 };

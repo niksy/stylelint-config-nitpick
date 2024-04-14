@@ -75,13 +75,8 @@ describe('Default config', function () {
 				}
 			);
 			const errors = mapErrors(results[0].warnings);
-			assert.notEqual(errors.indexOf('number-leading-zero'), -1);
 			assert.notEqual(
 				errors.indexOf('declaration-property-value-disallowed-list'),
-				-1
-			);
-			assert.notEqual(
-				errors.indexOf('declaration-colon-space-after'),
 				-1
 			);
 			assert.notEqual(
