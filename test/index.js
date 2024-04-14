@@ -126,7 +126,9 @@ describe('SCSS config', function () {
 			const errors = mapErrors(results[0].warnings);
 			assert.notEqual(errors.indexOf('scss/at-function-pattern'), -1);
 			assert.notEqual(
-				errors.indexOf('scss/at-import-partial-extension-blacklist'),
+				errors.indexOf(
+					'scss/at-import-partial-extension-disallowed-list'
+				),
 				-1
 			);
 			assert.notEqual(errors.indexOf('at-rule-disallowed-list'), -1);

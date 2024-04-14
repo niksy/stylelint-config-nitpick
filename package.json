@@ -29,7 +29,7 @@
     "postcss-scss": "^4.0.5",
     "stylelint-number-z-index-constraint": "^3.0.0",
     "stylelint-order": "^6.0.4",
-    "stylelint-scss": "^5.3.2",
+    "stylelint-scss": "^6.2.1",
     "stylelint-selector-pseudo-class-lvhfa": "^3.0.0",
     "stylelint-value-list-box-shadow-inset-first": "^3.0.0"
   },
@@ -48,15 +48,15 @@
     "mocha": "^10.4.0",
     "np": "^7.6.0",
     "prettier": "^2.4.0",
-    "stylelint": "^15.11.0",
-    "stylelint-find-new-rules": "^4.0.0",
+    "stylelint": "^16.3.1",
+    "stylelint-find-new-rules": "^5.0.0",
     "version-changelog": "^3.1.1"
   },
   "peerDependencies": {
-    "stylelint": "^15.0.0"
+    "stylelint": "^16.0.0"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18.12.0"
   },
   "keywords": [
     "nitpick",

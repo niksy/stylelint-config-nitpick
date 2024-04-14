@@ -7,7 +7,7 @@
 ## Install
 
 ```sh
-npm install stylelint@15 stylelint-config-nitpick --save-dev
+npm install stylelint@16 stylelint-config-nitpick --save-dev
 ```
 
 ## Usage

@@ -27,11 +27,6 @@ module.exports = {
 			{ severity: 'warning' }
 		],
 		'scss/at-if-no-null': null,
-		'scss/at-import-partial-extension-blacklist': [
-			['scss', 'sass'],
-			{ severity: 'warning' }
-		],
-		'scss/at-import-partial-extension-whitelist': null,
 		'scss/at-import-partial-extension': 'never',
 		'scss/at-mixin-argumentless-call-parentheses': [
 			'always',
@@ -117,6 +112,12 @@ module.exports = {
 		'scss/function-calculation-no-interpolation': true,
 		'scss/function-disallowed-list': null,
 		'scss/load-no-partial-leading-underscore': true,
-		'scss/property-no-unknown': null
+		'scss/property-no-unknown': null,
+		'scss/at-import-partial-extension-allowed-list': null,
+		'scss/at-import-partial-extension-disallowed-list': [
+			['scss', 'sass'],
+			{ severity: 'warning' }
+		],
+		'scss/no-unused-private-members': null
 	}
 };
