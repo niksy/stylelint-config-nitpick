@@ -1,3 +1,6 @@
 {
-	"extends": ["eslint-config-nitpick/tests"]
+	"extends": ["eslint-config-nitpick/tests"],
+	"parserOptions": {
+		"sourceType": "module"
+	}
 }

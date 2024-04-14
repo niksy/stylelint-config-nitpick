@@ -1,10 +1,8 @@
-'use strict';
-
-const { promises: fs } = require('fs');
-const path = require('path');
-const assert = require('assert');
-const isPlainObject = require('lodash/isPlainObject');
-const stylelint = require('stylelint');
+import { promises as fs } from 'node:fs';
+import assert from 'node:assert';
+import { fileURLToPath } from 'node:url';
+import isPlainObject from 'lodash/isPlainObject.js';
+import stylelint from 'stylelint';
 
 /**
  * @param {string} file
@@ -13,7 +11,7 @@ const stylelint = require('stylelint');
  * @returns {Promise}
  */
 async function runStylelint(file, config) {
-	const code = await fs.readFile(path.join(__dirname, file), 'utf8');
+	const code = await fs.readFile(new URL(file, import.meta.url), 'utf8');
 	try {
 		return await stylelint.lint({
 			code,
@@ -25,15 +23,15 @@ async function runStylelint(file, config) {
 }
 
 /**
- * @param {string} configFile
+ * @param {stylelint.Config} config
  *
  * @returns {Promise<Array>}
  */
-async function validateConfiguration(configFile) {
+async function validateConfiguration(config) {
 	try {
 		const data = await stylelint.lint({
 			code: '',
-			config: require(configFile)
+			config: config
 		});
 		return [].concat(
 			data.results[0].deprecations,
@@ -54,15 +52,16 @@ function mapErrors(errors) {
 }
 
 describe('Default config', function () {
-	it('should have config objects as plain objects', function () {
-		const config = require('../');
+	it('should have config objects as plain objects', async function () {
+		const { default: config } = await import('../index.js');
 
 		assert.ok(isPlainObject(config));
 		assert.ok(isPlainObject(config.rules));
 	});
 
 	it('should not have invalid options or deprecation warnings', async function () {
-		const errors = await validateConfiguration('../');
+		const { default: config } = await import('../index.js');
+		const errors = await validateConfiguration(config);
 		assert.equal(errors.length, 0);
 	});
 
@@ -71,7 +70,9 @@ describe('Default config', function () {
 			const { results } = await runStylelint(
 				'./fixtures/default.config.css',
 				{
-					extends: require.resolve('../')
+					extends: fileURLToPath(
+						new URL('../index.js', import.meta.url)
+					)
 				}
 			);
 			const errors = mapErrors(results[0].warnings);
@@ -99,15 +100,16 @@ describe('Default config', function () {
 });
 
 describe('SCSS config', function () {
-	it('should have config objects as plain objects', function () {
-		const config = require('../scss');
+	it('should have config objects as plain objects', async function () {
+		const { default: config } = await import('../scss.js');
 
 		assert.ok(isPlainObject(config));
 		assert.ok(isPlainObject(config.rules));
 	});
 
 	it('should not have invalid options or deprecation warnings', async function () {
-		const errors = await validateConfiguration('../scss');
+		const { default: config } = await import('../scss.js');
+		const errors = await validateConfiguration(config);
 		assert.equal(errors.length, 0);
 	});
 
@@ -116,7 +118,9 @@ describe('SCSS config', function () {
 			const { results } = await runStylelint(
 				'./fixtures/scss.config.scss',
 				{
-					extends: require.resolve('../scss')
+					extends: fileURLToPath(
+						new URL('../scss.js', import.meta.url)
+					)
 				}
 			);
 			const errors = mapErrors(results[0].warnings);
