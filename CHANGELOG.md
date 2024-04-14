@@ -2,6 +2,11 @@
 
 ## [Unreleased][]
 
+-   Switch to ESM
+-   Upgrade to Stylelint 16
+-   Remove stylistic rules
+-   Add `inset` before `top`/`right`/`bottom`/`left`
+
 ## [10.0.2][] - 2022-11-16
 
 ### Changed
