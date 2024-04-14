@@ -63,6 +63,7 @@ module.exports = {
 				'box-sizing',
 				'display',
 				'position',
+				'inset',
 				'top',
 				'right',
 				'bottom',
