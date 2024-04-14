@@ -7,9 +7,7 @@ module.exports = {
 		'stylelint-number-z-index-constraint',
 		'stylelint-order'
 	],
-
 	rules: {
-		// Other
 		'plugin/selector-pseudo-class-lvhfa': [true, { severity: 'warning' }],
 		'plugin/value-list-box-shadow-inset-first': [
 			true,
@@ -19,7 +17,6 @@ module.exports = {
 			min: 10,
 			max: 9999
 		},
-
 		'order/order': [
 			[
 				'custom-properties',
@@ -132,30 +129,20 @@ module.exports = {
 			{ unspecified: 'bottom', severity: 'warning' }
 		],
 		'order/properties-alphabetical-order': null,
-
-		// Color
 		'color-hex-alpha': null,
 		'color-hex-case': 'lower',
 		'color-hex-length': 'short',
 		'color-named': ['never', { severity: 'warning' }],
 		'color-no-hex': null,
 		'color-no-invalid-hex': true,
-
-		// Custom property
 		'custom-property-no-missing-var-function': true,
-
-		// Font family
 		'font-family-name-quotes': [
 			'always-where-recommended',
 			{ severity: 'warning' }
 		],
 		'font-family-no-duplicate-names': true,
 		'font-family-no-missing-generic-family-keyword': true,
-
-		// Font weight
 		'font-weight-notation': 'named-where-possible',
-
-		// Function
 		'function-disallowed-list': null,
 		'function-calc-no-unspaced-operator': true,
 		'function-comma-newline-after': null,
@@ -174,63 +161,37 @@ module.exports = {
 		'function-allowed-list': null,
 		'function-whitespace-after': 'always',
 		'function-no-unknown': [true, { severity: 'warning' }],
-
-		// Keyframes
 		'keyframes-name-pattern': null,
-
-		// Number
 		'number-leading-zero': 'always',
 		'number-max-precision': 5,
 		'number-no-trailing-zeros': null,
-
-		// String
 		'string-no-newline': true,
 		'string-quotes': ['single', { severity: 'warning' }],
-
-		// Length
 		'length-zero-no-unit': [true, { severity: 'warning' }],
-
-		// Time
 		'time-min-milliseconds': [100, { severity: 'warning' }],
-
-		// Unit
 		'unit-disallowed-list': null,
 		'unit-case': 'lower',
 		'unit-no-unknown': [true, { severity: 'warning' }],
 		'unit-allowed-list': null,
-
-		// Value
 		'value-no-vendor-prefix': true,
-
-		// Value list
 		'value-keyword-case': 'lower',
 		'value-list-comma-newline-after': null,
 		'value-list-comma-newline-before': null,
 		'value-list-comma-space-after': 'always',
 		'value-list-comma-space-before': 'never',
 		'value-list-max-empty-lines': null,
-
-		// Custom property
 		'custom-property-empty-line-before': null,
 		'custom-property-pattern': null,
-
-		// Shorthand property
 		'shorthand-property-no-redundant-values': [
 			true,
 			{ severity: 'warning' }
 		],
-
-		// Property
 		'property-disallowed-list': null,
 		'property-case': 'lower',
 		'property-no-unknown': null,
 		'property-no-vendor-prefix': true,
 		'property-allowed-list': null,
-
-		// Keyframe declaration
 		'keyframe-declaration-no-important': true,
-
-		// Declaration
 		'declaration-bang-space-after': 'never',
 		'declaration-bang-space-before': 'always',
 		'declaration-colon-newline-after': [
@@ -252,8 +213,6 @@ module.exports = {
 		],
 		'declaration-property-value-allowed-list': null,
 		'declaration-property-max-values': null,
-
-		// Declaration block
 		'declaration-block-no-duplicate-properties': [
 			true,
 			{ ignore: ['consecutive-duplicates'] }
@@ -270,8 +229,6 @@ module.exports = {
 		'declaration-block-single-line-max-declarations': null,
 		'declaration-block-trailing-semicolon': 'always',
 		'declaration-block-no-duplicate-custom-properties': true,
-
-		// Block
 		'block-closing-brace-empty-line-before': 'never',
 		'block-closing-brace-newline-after': 'always',
 		'block-closing-brace-newline-before': 'always',
@@ -282,8 +239,6 @@ module.exports = {
 		'block-opening-brace-newline-before': null,
 		'block-opening-brace-space-after': 'always-single-line',
 		'block-opening-brace-space-before': 'always',
-
-		// Selector
 		'selector-attribute-brackets-space-inside': 'never',
 		'selector-attribute-operator-disallowed-list': null,
 		'selector-attribute-operator-space-after': 'never',
@@ -327,17 +282,11 @@ module.exports = {
 		'selector-pseudo-element-allowed-list': null,
 		'selector-attribute-name-disallowed-list': null,
 		'selector-disallowed-list': null,
-
-		// Selector list
 		'selector-list-comma-newline-after': 'always-multi-line',
 		'selector-list-comma-newline-before': null,
 		'selector-list-comma-space-after': 'always-single-line',
 		'selector-list-comma-space-before': 'never',
-
-		// Rule
 		'rule-empty-line-before': ['always', { severity: 'warning' }],
-
-		// Media feature
 		'media-feature-colon-space-after': 'always',
 		'media-feature-colon-space-before': 'never',
 		'media-feature-name-disallowed-list': null,
@@ -349,17 +298,11 @@ module.exports = {
 		'media-feature-range-operator-space-after': 'always',
 		'media-feature-range-operator-space-before': 'always',
 		'media-feature-name-value-allowed-list': null,
-
-		// Custom media
 		'custom-media-pattern': null,
-
-		// Media query list
 		'media-query-list-comma-newline-after': 'always-multi-line',
 		'media-query-list-comma-newline-before': null,
 		'media-query-list-comma-space-after': 'always-single-line',
 		'media-query-list-comma-space-before': 'never',
-
-		// At-rule
 		'at-rule-disallowed-list': null,
 		'at-rule-empty-line-before': [
 			'always',
@@ -384,15 +327,11 @@ module.exports = {
 		'at-rule-semicolon-space-before': 'never',
 		'at-rule-allowed-list': null,
 		'at-rule-property-required-list': null,
-
-		// Comment
 		'comment-empty-line-before': null,
 		'comment-no-empty': null,
 		'comment-whitespace-inside': 'always',
 		'comment-word-disallowed-list': null,
 		'comment-pattern': null,
-
-		// General / Sheet
 		indentation: 'tab',
 		'max-empty-lines': [1, { severity: 'warning' }],
 		'max-line-length': null,
@@ -417,27 +356,25 @@ module.exports = {
 		'unicode-bom': null,
 		'no-invalid-position-at-import-rule': true,
 		'no-irregular-whitespace': true,
-
-		// Limit language features
 		'alpha-value-notation': ['number'],
 		'color-function-notation': ['legacy'],
 		'hue-degree-notation': null,
-
-		// Named grid areas
 		'named-grid-areas-no-invalid': true,
-
-		// Rules
 		'rule-selector-property-disallowed-list': null,
-
-		// Unknown
 		'annotation-no-unknown': true,
-
-		// Notation
 		'import-notation': null,
 		'keyframe-selector-notation': ['percentage', { severity: 'warning' }],
 		'selector-not-notation': ['complex', { severity: 'warning' }],
-
-		// Duplicate
-		'keyframe-block-no-duplicate-selectors': true
+		'keyframe-block-no-duplicate-selectors': true,
+		'media-feature-range-notation': null,
+		'declaration-property-value-no-unknown': [
+			true,
+			{ severity: 'warning' }
+		],
+		'media-feature-name-unit-allowed-list': null,
+		'media-feature-name-value-no-unknown': true,
+		'media-query-no-invalid': true,
+		'no-unknown-custom-properties': null,
+		'selector-anb-no-unmatchable': null
 	}
 };

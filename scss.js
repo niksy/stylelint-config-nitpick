@@ -3,12 +3,8 @@
 module.exports = {
 	plugins: ['stylelint-scss'],
 	customSyntax: 'postcss-scss',
-
 	rules: {
-		// @each
 		'scss/at-each-key-value-single-line': [true, { severity: 'warning' }],
-
-		// @else
 		'scss/at-else-closing-brace-newline-after': 'always-last-in-chain',
 		'scss/at-else-closing-brace-space-after': [
 			'always-intermediate',
@@ -16,11 +12,7 @@ module.exports = {
 		],
 		'scss/at-else-empty-line-before': ['never', { severity: 'warning' }],
 		'scss/at-else-if-parentheses-space-before': ['always'],
-
-		// @extend
 		'scss/at-extend-no-missing-placeholder': true,
-
-		// @function
 		'scss/at-function-pattern': [/^[\d_a-z-]+$/],
 		'scss/at-function-named-arguments': [
 			'always',
@@ -29,16 +21,12 @@ module.exports = {
 		'scss/at-function-parentheses-space-before': 'always',
 		'function-no-unknown': null,
 		'scss/function-no-unknown': [true, { severity: 'warning' }],
-
-		// @if
 		'scss/at-if-closing-brace-newline-after': 'always-last-in-chain',
 		'scss/at-if-closing-brace-space-after': [
 			'always-intermediate',
 			{ severity: 'warning' }
 		],
 		'scss/at-if-no-null': null,
-
-		// @import
 		'scss/at-import-no-partial-leading-underscore': true,
 		'scss/at-import-partial-extension-blacklist': [
 			['scss', 'sass'],
@@ -46,8 +34,6 @@ module.exports = {
 		],
 		'scss/at-import-partial-extension-whitelist': null,
 		'scss/at-import-partial-extension': 'never',
-
-		// @mixin
 		'scss/at-mixin-argumentless-call-parentheses': [
 			'always',
 			{ severity: 'warning' }
@@ -58,19 +44,11 @@ module.exports = {
 			{ ignore: ['single-argument'], severity: 'warning' }
 		],
 		'scss/at-mixin-parentheses-space-before': 'always',
-
-		// @rule
 		'at-rule-no-unknown': null,
 		'scss/at-rule-no-unknown': [true, { severity: 'warning' }],
 		'scss/at-rule-conditional-no-parentheses': null,
-
-		// @use
 		'scss/at-use-no-unnamespaced': null,
-
-		// @debug
 		'at-rule-disallowed-list': [['debug'], { severity: 'warning' }],
-
-		// $variable
 		'scss/dollar-variable-colon-newline-after': null,
 		'scss/dollar-variable-colon-space-after': 'always',
 		'scss/dollar-variable-colon-space-before': 'never',
@@ -79,8 +57,6 @@ module.exports = {
 		'scss/dollar-variable-pattern': [/^[\d_a-z-]+$/],
 		'scss/dollar-variable-default': null,
 		'scss/dollar-variable-no-namespaced-assignment': true,
-
-		// %placeholder
 		'scss/percent-placeholder-pattern': [/^[\d_a-z-]+$/],
 		'scss/dollar-variable-empty-line-after': [
 			'always',
@@ -90,59 +66,33 @@ module.exports = {
 			true,
 			{ ignore: ['comments', 'imports'] }
 		],
-
-		// //comment
 		'scss/double-slash-comment-empty-line-before': null,
 		'scss/double-slash-comment-inline': null,
 		'scss/double-slash-comment-whitespace-inside': 'always',
-
-		// Comment
 		'scss/comment-no-loud': null,
 		'scss/comment-no-empty': null,
-
-		// Dimension
 		'scss/dimension-no-non-numeric-values': true,
-
-		// Function
 		'scss/function-quote-no-quoted-strings-inside': null,
 		'scss/function-unquote-no-unquoted-strings-inside': null,
 		'scss/function-color-relative': [true, { severity: 'warning' }],
-
-		// Map
 		'scss/map-keys-quotes': ['always', { severity: 'warning' }],
-
-		// Declaration
 		'scss/declaration-nested-properties': 'never',
 		'scss/declaration-nested-properties-no-divided-groups': null,
-
-		// Media feature
 		'scss/media-feature-value-dollar-variable': null,
-
-		// Operator
 		'scss/operator-no-newline-after': true,
 		'scss/operator-no-newline-before': true,
 		'scss/operator-no-unspaced': true,
-
-		// Partial
 		'scss/partial-no-import': null,
-
-		// Selector
 		'scss/selector-no-redundant-nesting-selector': [
 			true,
 			{ severity: 'warning' }
 		],
 		'scss/selector-nest-combinators': null,
 		'scss/selector-no-union-class-name': null,
-
-		// General / Sheet
 		'scss/no-duplicate-mixins': true,
 		'scss/no-duplicate-dollar-variables': true,
 		'scss/no-dollar-variables': null,
-
-		// -- Allow when using Sass modules
 		'scss/no-global-function-names': null,
-
-		// Other
 		'at-rule-empty-line-before': [
 			'always',
 			{
@@ -155,17 +105,25 @@ module.exports = {
 				ignoreAtRules: ['if', 'else']
 			}
 		],
-
 		'block-closing-brace-newline-after': [
 			'always',
 			{
 				ignoreAtRules: ['if', 'else']
 			}
 		],
-
 		'no-duplicate-selectors': null,
-		'annotation-no-unknown': [true, {
-		    ignoreAnnotations: ['default', 'global']
-		}]
+		'annotation-no-unknown': [
+			true,
+			{
+				ignoreAnnotations: ['default', 'global']
+			}
+		],
+		'scss/at-root-no-redundant': true,
+		'scss/at-use-no-redundant-alias': null,
+		'scss/block-no-redundant-nesting': null,
+		'scss/function-calculation-no-interpolation': true,
+		'scss/function-disallowed-list': null,
+		'scss/load-no-partial-leading-underscore': true,
+		'scss/property-no-unknown': null
 	}
 };
