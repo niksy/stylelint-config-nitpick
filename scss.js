@@ -118,15 +118,5 @@ module.exports = {
 		'scss/function-disallowed-list': null,
 		'scss/load-no-partial-leading-underscore': true,
 		'scss/property-no-unknown': null
-
-		// eslint-disable-next-line multiline-comment-style
-		// Stylistic rules
-		// 'block-closing-brace-newline-after': [
-		// 	'always',
-		// 	{
-		// 		ignoreAtRules: ['if', 'else']
-		// 	}
-		// ],
-		// 'scss/at-import-no-partial-leading-underscore': true,
 	}
 };
