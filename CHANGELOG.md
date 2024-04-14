@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [11.0.0][] - 2024-04-14
+
 -   Switch to ESM
 -   Upgrade to Stylelint 16
 -   Remove stylistic rules
@@ -59,6 +61,10 @@
     https://github.com/niksy/stylelint-config-nitpick/compare/v10.0.1...HEAD
 
 [10.0.1]: https://github.com/niksy/stylelint-config-nitpick/tree/v10.0.1
-[unreleased]:
-	https://github.com/niksy/stylelint-config-nitpick/compare/v10.0.2...HEAD
+
+    https://github.com/niksy/stylelint-config-nitpick/compare/v10.0.2...HEAD
+
 [10.0.2]: https://github.com/niksy/stylelint-config-nitpick/tree/v10.0.2
+[Unreleased]:
+	https://github.com/niksy/stylelint-config-nitpick/compare/v11.0.0...HEAD
+[11.0.0]: https://github.com/niksy/stylelint-config-nitpick/tree/v11.0.0
