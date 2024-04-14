@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+-   Use Node 18 in CI
+
 ## [11.0.0][] - 2024-04-14
 
 -   Switch to ESM
