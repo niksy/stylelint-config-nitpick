@@ -72,6 +72,6 @@ MIT © [Ivan Nikolić](http://ivannikolic.com)
 [ci]: https://github.com/niksy/stylelint-config-nitpick/actions?query=workflow%3ACI
 [ci-img]: https://github.com/niksy/stylelint-config-nitpick/workflows/CI/badge.svg?branch=master
 [stylelint]: http://stylelint.io/
-[stylelint-extends]: https://stylelint.io/user-guide/configuration/#extends
+[stylelint-extends]: https://stylelint.io/user-guide/configure#extends
 
 <!-- prettier-ignore-end -->
