@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+-   Group and turn off Sass stylistic rules
+
 ## [11.0.1][] - 2024-04-14
 
 -   Use Node 18 in CI

@@ -1,3 +1,5 @@
+/* eslint-disable multiline-comment-style */
+
 export default {
 	plugins: ['stylelint-scss'],
 	customSyntax: 'postcss-scss',
@@ -87,37 +89,21 @@ export default {
 		'scss/no-unused-private-members': null,
 
 		// Stylistic rules
-		'at-rule-empty-line-before': [
-			'always',
-			{
-				except: ['blockless-after-blockless'],
-				ignore: [
-					'blockless-after-blockless',
-					'after-comment',
-					'inside-block'
-				],
-				ignoreAtRules: ['if', 'else']
-			}
-		],
-		'scss/at-else-closing-brace-newline-after': 'always-last-in-chain',
-		'scss/at-else-closing-brace-space-after': [
-			'always-intermediate',
-			{ severity: 'warning' }
-		],
-		'scss/at-else-empty-line-before': ['never', { severity: 'warning' }],
-		'scss/at-else-if-parentheses-space-before': ['always'],
-		'scss/at-function-parentheses-space-before': 'always',
-		'scss/at-if-closing-brace-newline-after': 'always-last-in-chain',
-		'scss/at-if-closing-brace-space-after': [
-			'always-intermediate',
-			{ severity: 'warning' }
-		],
-		'scss/at-mixin-parentheses-space-before': 'always',
+		// Currently turned off, can probably be removed at later date: https://github.com/stylelint-scss/stylelint-scss/issues/814
+		'at-rule-empty-line-before': null,
+		'scss/at-else-closing-brace-newline-after': null,
+		'scss/at-else-closing-brace-space-after': null,
+		'scss/at-else-empty-line-before': null,
+		'scss/at-else-if-parentheses-space-before': null,
+		'scss/at-function-parentheses-space-before': null,
+		'scss/at-if-closing-brace-newline-after': null,
+		'scss/at-if-closing-brace-space-after': null,
+		'scss/at-mixin-parentheses-space-before': null,
 		'scss/dollar-variable-colon-newline-after': null,
-		'scss/dollar-variable-colon-space-after': 'always',
-		'scss/dollar-variable-colon-space-before': 'never',
-		'scss/operator-no-newline-after': true,
-		'scss/operator-no-newline-before': true,
-		'scss/operator-no-unspaced': true
+		'scss/dollar-variable-colon-space-after': null,
+		'scss/dollar-variable-colon-space-before': null,
+		'scss/operator-no-newline-after': null,
+		'scss/operator-no-newline-before': null,
+		'scss/operator-no-unspaced': null
 	}
 };
