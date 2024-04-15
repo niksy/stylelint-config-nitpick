@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [11.0.2][] - 2024-04-15
+
 -   Group and turn off Sass stylistic rules
 
 ## [11.0.1][] - 2024-04-14
@@ -72,7 +74,11 @@
 
 [10.0.2]: https://github.com/niksy/stylelint-config-nitpick/tree/v10.0.2
 [Unreleased]:
-	https://github.com/niksy/stylelint-config-nitpick/compare/v11.0.1...HEAD
+	https://github.com/niksy/stylelint-config-nitpick/compare/v11.0.2...HEAD
+[11.0.2]: https://github.com/niksy/stylelint-config-nitpick/tree/v11.0.2
+
+    https://github.com/niksy/stylelint-config-nitpick/compare/v11.0.1...HEAD
+
 [11.0.1]: https://github.com/niksy/stylelint-config-nitpick/tree/v11.0.1
 
     https://github.com/niksy/stylelint-config-nitpick/compare/v11.0.0...HEAD
