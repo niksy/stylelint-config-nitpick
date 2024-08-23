@@ -293,6 +293,7 @@ export default {
 		'media-query-no-invalid': true,
 		'no-unknown-custom-properties': null,
 		'selector-anb-no-unmatchable': null,
-		'lightness-notation': null
+		'lightness-notation': null,
+		'no-unknown-custom-media': null
 	}
 };

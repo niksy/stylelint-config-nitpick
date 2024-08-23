@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+-   Update rules
+
 ## [11.0.2][] - 2024-04-15
 
 -   Group and turn off Sass stylistic rules

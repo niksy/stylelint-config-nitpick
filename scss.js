@@ -14,7 +14,7 @@ export default {
 		'function-no-unknown': null,
 		'scss/function-no-unknown': [true, { severity: 'warning' }],
 		'scss/at-if-no-null': null,
-		'scss/at-import-partial-extension': 'never',
+		'scss/load-partial-extension': 'never',
 		'scss/at-mixin-argumentless-call-parentheses': [
 			'always',
 			{ severity: 'warning' }
@@ -104,6 +104,8 @@ export default {
 		'scss/dollar-variable-colon-space-before': null,
 		'scss/operator-no-newline-after': null,
 		'scss/operator-no-newline-before': null,
-		'scss/operator-no-unspaced': null
+		'scss/operator-no-unspaced': null,
+		'scss/at-mixin-no-risky-nesting-selector': null,
+		'scss/declaration-property-value-no-unknown': null
 	}
 };
