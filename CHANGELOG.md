@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [11.1.0][] - 2024-08-23
+
 -   Update rules
 
 ## [11.0.2][] - 2024-04-15
@@ -76,7 +78,11 @@
 
 [10.0.2]: https://github.com/niksy/stylelint-config-nitpick/tree/v10.0.2
 [Unreleased]:
-	https://github.com/niksy/stylelint-config-nitpick/compare/v11.0.2...HEAD
+	https://github.com/niksy/stylelint-config-nitpick/compare/v11.1.0...HEAD
+[11.1.0]: https://github.com/niksy/stylelint-config-nitpick/tree/v11.1.0
+
+    https://github.com/niksy/stylelint-config-nitpick/compare/v11.0.2...HEAD
+
 [11.0.2]: https://github.com/niksy/stylelint-config-nitpick/tree/v11.0.2
 
     https://github.com/niksy/stylelint-config-nitpick/compare/v11.0.1...HEAD
