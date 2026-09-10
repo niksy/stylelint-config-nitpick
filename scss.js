@@ -96,6 +96,7 @@ export default {
 		'scss/operator-no-newline-before': null,
 		'scss/operator-no-unspaced': null,
 		'scss/at-mixin-no-risky-nesting-selector': null,
+		'declaration-property-value-no-unknown': null,
 		'scss/declaration-property-value-no-unknown': null,
 		'scss/function-color-channel': [true, { severity: 'warning' }],
 		'scss/no-duplicate-load-rules': true,
