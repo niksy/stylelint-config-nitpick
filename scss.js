@@ -15,10 +15,7 @@ export default {
 		'scss/function-no-unknown': [true, { severity: 'warning' }],
 		'scss/at-if-no-null': null,
 		'scss/load-partial-extension': 'never',
-		'scss/at-mixin-argumentless-call-parentheses': [
-			'always',
-			{ severity: 'warning' }
-		],
+		'scss/at-mixin-argumentless-call-parentheses': ['always', { severity: 'warning' }],
 		'scss/at-mixin-pattern': [/^[\d_a-z-]+$/],
 		'scss/at-mixin-named-arguments': [
 			'always',
@@ -35,14 +32,8 @@ export default {
 		'scss/dollar-variable-default': null,
 		'scss/dollar-variable-no-namespaced-assignment': true,
 		'scss/percent-placeholder-pattern': [/^[\d_a-z-]+$/],
-		'scss/dollar-variable-empty-line-after': [
-			'always',
-			{ except: ['before-dollar-variable'] }
-		],
-		'scss/dollar-variable-first-in-block': [
-			true,
-			{ ignore: ['comments', 'imports'] }
-		],
+		'scss/dollar-variable-empty-line-after': ['always', { except: ['before-dollar-variable'] }],
+		'scss/dollar-variable-first-in-block': [true, { ignore: ['comments', 'imports'] }],
 		'scss/double-slash-comment-empty-line-before': null,
 		'scss/double-slash-comment-inline': null,
 		'scss/double-slash-comment-whitespace-inside': 'always',
@@ -57,10 +48,7 @@ export default {
 		'scss/declaration-nested-properties-no-divided-groups': null,
 		'scss/media-feature-value-dollar-variable': null,
 		'scss/partial-no-import': null,
-		'scss/selector-no-redundant-nesting-selector': [
-			true,
-			{ severity: 'warning' }
-		],
+		'scss/selector-no-redundant-nesting-selector': [true, { severity: 'warning' }],
 		'scss/selector-nest-combinators': null,
 		'scss/selector-no-union-class-name': null,
 		'scss/no-duplicate-mixins': true,
@@ -106,6 +94,8 @@ export default {
 		'scss/operator-no-newline-before': null,
 		'scss/operator-no-unspaced': null,
 		'scss/at-mixin-no-risky-nesting-selector': null,
-		'scss/declaration-property-value-no-unknown': null
+		'scss/declaration-property-value-no-unknown': null,
+		'scss/function-color-channel': [true, { severity: 'warning' }],
+		'scss/no-duplicate-load-rules': true
 	}
 };

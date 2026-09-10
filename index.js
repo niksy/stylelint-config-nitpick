@@ -7,10 +7,7 @@ export default {
 	],
 	rules: {
 		'plugin/selector-pseudo-class-lvhfa': [true, { severity: 'warning' }],
-		'plugin/value-list-box-shadow-inset-first': [
-			true,
-			{ severity: 'warning' }
-		],
+		'plugin/value-list-box-shadow-inset-first': [true, { severity: 'warning' }],
 		'plugin/number-z-index-constraint': {
 			min: 10,
 			max: 9999
@@ -134,10 +131,7 @@ export default {
 		'color-no-hex': null,
 		'color-no-invalid-hex': true,
 		'custom-property-no-missing-var-function': true,
-		'font-family-name-quotes': [
-			'always-where-recommended',
-			{ severity: 'warning' }
-		],
+		'font-family-name-quotes': ['always-where-recommended', { severity: 'warning' }],
 		'font-family-no-duplicate-names': true,
 		'font-family-no-missing-generic-family-keyword': true,
 		'font-weight-notation': 'named-where-possible',
@@ -163,10 +157,7 @@ export default {
 		'value-keyword-case': 'lower',
 		'custom-property-empty-line-before': null,
 		'custom-property-pattern': null,
-		'shorthand-property-no-redundant-values': [
-			true,
-			{ severity: 'warning' }
-		],
+		'shorthand-property-no-redundant-values': [true, { severity: 'warning' }],
 		'property-disallowed-list': null,
 		'property-no-unknown': null,
 		'property-no-vendor-prefix': true,
@@ -185,14 +176,8 @@ export default {
 		],
 		'declaration-property-value-allowed-list': null,
 		'declaration-property-max-values': null,
-		'declaration-block-no-duplicate-properties': [
-			true,
-			{ ignore: ['consecutive-duplicates'] }
-		],
-		'declaration-block-no-redundant-longhand-properties': [
-			true,
-			{ severity: 'warning' }
-		],
+		'declaration-block-no-duplicate-properties': [true, { ignore: ['consecutive-duplicates'] }],
+		'declaration-block-no-redundant-longhand-properties': [true, { severity: 'warning' }],
 		'declaration-block-no-shorthand-property-overrides': true,
 		'declaration-block-single-line-max-declarations': null,
 		'declaration-block-no-duplicate-custom-properties': true,
@@ -214,10 +199,7 @@ export default {
 		'selector-pseudo-element-no-unknown': [true, { severity: 'warning' }],
 		'selector-type-case': 'lower',
 		'selector-type-no-unknown': [true, { severity: 'warning' }],
-		'selector-combinator-disallowed-list': [
-			['>', '~', '+'],
-			{ severity: 'warning' }
-		],
+		'selector-combinator-disallowed-list': [['>', '~', '+'], { severity: 'warning' }],
 		'selector-combinator-allowed-list': null,
 		'selector-max-attribute': null,
 		'selector-max-class': [3, { severity: 'warning' }],
@@ -242,11 +224,7 @@ export default {
 			'always',
 			{
 				except: ['blockless-after-blockless'],
-				ignore: [
-					'blockless-after-blockless',
-					'after-comment',
-					'inside-block'
-				]
+				ignore: ['blockless-after-blockless', 'after-comment', 'inside-block']
 			}
 		],
 		'at-rule-no-unknown': [true, { severity: 'warning' }],
@@ -284,16 +262,28 @@ export default {
 		'selector-not-notation': ['complex', { severity: 'warning' }],
 		'keyframe-block-no-duplicate-selectors': true,
 		'media-feature-range-notation': null,
-		'declaration-property-value-no-unknown': [
-			true,
-			{ severity: 'warning' }
-		],
+		'declaration-property-value-no-unknown': [true, { severity: 'warning' }],
 		'media-feature-name-unit-allowed-list': null,
 		'media-feature-name-value-no-unknown': true,
 		'media-query-no-invalid': true,
 		'no-unknown-custom-properties': null,
 		'selector-anb-no-unmatchable': null,
 		'lightness-notation': null,
-		'no-unknown-custom-media': null
+		'no-unknown-custom-media': null,
+		'at-rule-descriptor-no-unknown': null,
+		'at-rule-descriptor-value-no-unknown': null,
+		'at-rule-no-deprecated': null,
+		'at-rule-prelude-no-invalid': null,
+		'block-no-redundant-nested-style-rules': null,
+		'color-function-alias-notation': ['without-alpha', { severity: 'warning' }],
+		'container-name-pattern': null,
+		'declaration-property-value-keyword-no-deprecated': [true, { severity: 'warning' }],
+		'layer-name-pattern': null,
+		'media-type-no-deprecated': [true, { severity: 'warning' }],
+		'nesting-selector-no-missing-scoping-root': null,
+		'no-invalid-position-declaration': null,
+		'property-no-deprecated': [true, { severity: 'warning' }],
+		'rule-nesting-at-rule-required-list': null,
+		'syntax-string-no-invalid': null
 	}
 };
