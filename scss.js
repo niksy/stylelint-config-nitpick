@@ -1,5 +1,7 @@
 /* eslint-disable multiline-comment-style */
 
+/** @import stylelint from 'stylelint' */
+/** @type {stylelint.Config} */
 export default {
 	plugins: ['stylelint-scss'],
 	customSyntax: 'postcss-scss',

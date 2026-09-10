@@ -1,3 +1,5 @@
+/** @import stylelint from 'stylelint' */
+/** @type {stylelint.Config} */
 export default {
 	plugins: [
 		'stylelint-selector-pseudo-class-lvhfa',
