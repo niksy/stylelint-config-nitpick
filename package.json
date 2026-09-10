@@ -4,8 +4,14 @@
   "description": "Stylelint config for my projects.",
   "license": "MIT",
   "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com)",
-  "main": "index.js",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -18,46 +24,49 @@
   ],
   "scripts": {
     "lint": "eslint '{index,scss,test/**/*}.js'",
+    "prepare": "if [[ -x \"$(command -v husky)\" ]]; then husky; fi",
     "postpublish": "GITHUB_TOKEN=$GITHUB_RELEASE_TOKEN github-release-from-changelog",
     "prerelease": "npm run lint",
     "release": "np --no-release-draft",
     "pretest": "stylelint-find-new-rules test/fixtures/all-rules.js",
     "test": "mocha 'test/**/*.js'",
     "test:watch": "npm test -- --watch",
-    "version": "if [ $(git rev-parse --abbrev-ref HEAD) == 'master' ]; then sed -i '' '/\\[unreleased\\]:/d' CHANGELOG.md && version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md; else echo; fi"
+    "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
   },
   "dependencies": {
-    "postcss-scss": "^4.0.5",
-    "stylelint-number-z-index-constraint": "^3.0.0",
+    "postcss-scss": "^4.0.9",
+    "stylelint-number-z-index-constraint": "^3.1.1",
     "stylelint-order": "^6.0.4",
-    "stylelint-scss": "^6.2.1",
-    "stylelint-selector-pseudo-class-lvhfa": "^3.0.0",
-    "stylelint-value-list-box-shadow-inset-first": "^3.0.0"
+    "stylelint-scss": "^6.14.0",
+    "stylelint-selector-pseudo-class-lvhfa": "^3.1.1",
+    "stylelint-value-list-box-shadow-inset-first": "^3.2.0"
   },
   "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.19.43",
     "changelog-verify": "^1.1.2",
-    "eslint": "^8.5.0",
-    "eslint-config-nitpick": "^13.0.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint": "^9.39.1",
+    "eslint-config-nitpick": "^15.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.6",
     "github-release-from-changelog": "^2.1.1",
-    "husky": "^4.3.0",
-    "lint-staged": "^10.4.2",
-    "lodash": "^4.0.0",
-    "lodash.difference": "^4.3.0",
-    "lodash.without": "^4.2.0",
-    "mocha": "^10.4.0",
-    "np": "^7.6.0",
-    "prettier": "^2.4.0",
-    "stylelint": "^16.3.1",
-    "stylelint-find-new-rules": "^5.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
+    "lodash": "^4.18.1",
+    "lodash.difference": "^4.5.0",
+    "lodash.without": "^4.4.0",
+    "mocha": "^10.8.2",
+    "np": "^10.3.0",
+    "prettier": "^3.9.6",
+    "stylelint": "^16.26.1",
+    "stylelint-find-new-rules": "^5.0.1",
     "version-changelog": "^3.1.1"
   },
   "peerDependencies": {
     "stylelint": "^16.0.0"
   },
   "engines": {
-    "node": ">=18.12.0"
+    "node": ">=20.19"
   },
   "keywords": [
     "nitpick",
