@@ -96,6 +96,7 @@ export default {
 		'scss/at-mixin-no-risky-nesting-selector': null,
 		'scss/declaration-property-value-no-unknown': null,
 		'scss/function-color-channel': [true, { severity: 'warning' }],
-		'scss/no-duplicate-load-rules': true
+		'scss/no-duplicate-load-rules': true,
+		'scss/selector-class-pattern': null
 	}
 };

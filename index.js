@@ -284,6 +284,15 @@ export default {
 		'no-invalid-position-declaration': null,
 		'property-no-deprecated': [true, { severity: 'warning' }],
 		'rule-nesting-at-rule-required-list': null,
-		'syntax-string-no-invalid': null
+		'syntax-string-no-invalid': null,
+		'display-notation': null,
+		'property-layout-mappings': null,
+		'relative-selector-nesting-notation': null,
+		'selector-no-deprecated': null,
+		'selector-no-invalid': [true, { severity: 'warning' }],
+		'selector-no-unmatchable': [true, { severity: 'warning' }],
+		'unit-layout-mappings': null,
+		'value-keyword-layout-mappings': null,
+		'order/custom-properties-alphabetical-order': null
 	}
 };
