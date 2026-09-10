@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [12.0.0][] - 2026-09-10
+
 ### Changed
 
 - **Breaking**: Supports Node >= 20.19
@@ -83,7 +85,8 @@
     https://github.com/niksy/stylelint-config-nitpick/compare/v10.0.2...HEAD
 
 [10.0.2]: https://github.com/niksy/stylelint-config-nitpick/tree/v10.0.2
-[Unreleased]: https://github.com/niksy/stylelint-config-nitpick/compare/v11.1.0...HEAD
+[Unreleased]: https://github.com/niksy/stylelint-config-nitpick/compare/v12.0.0...HEAD
+[12.0.0]: https://github.com/niksy/stylelint-config-nitpick/compare/v11.1.0...v12.0.0
 [11.1.0]: https://github.com/niksy/stylelint-config-nitpick/tree/v11.1.0
 
     https://github.com/niksy/stylelint-config-nitpick/compare/v11.0.2...HEAD
