@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [12.0.1][] - 2026-09-16
+
 ### Fixed
 
 - Update Stylelint peer depenendancy version
@@ -89,7 +91,8 @@
     https://github.com/niksy/stylelint-config-nitpick/compare/v10.0.2...HEAD
 
 [10.0.2]: https://github.com/niksy/stylelint-config-nitpick/tree/v10.0.2
-[Unreleased]: https://github.com/niksy/stylelint-config-nitpick/compare/v12.0.0...HEAD
+[Unreleased]: https://github.com/niksy/stylelint-config-nitpick/compare/v12.0.1...HEAD
+[12.0.1]: https://github.com/niksy/stylelint-config-nitpick/compare/v12.0.0...v12.0.1
 [12.0.0]: https://github.com/niksy/stylelint-config-nitpick/compare/v11.1.0...v12.0.0
 [11.1.0]: https://github.com/niksy/stylelint-config-nitpick/tree/v11.1.0
 
