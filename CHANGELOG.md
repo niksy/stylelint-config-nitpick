@@ -2,6 +2,10 @@
 
 ## [Unreleased][]
 
+### Fixed
+
+- Missing package export for Sass configuration
+
 ## [12.0.1][] - 2026-09-16
 
 ### Fixed

@@ -9,6 +9,9 @@
     ".": {
       "import": "./index.js"
     },
+    "./scss": {
+      "import": "./scss.js"
+    },
     "./package.json": "./package.json"
   },
   "main": "index.js",
